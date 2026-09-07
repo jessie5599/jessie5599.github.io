@@ -22,4 +22,4 @@ Allow: /
 User-agent: Yeti
 Allow: /
 
-Sitemap: https://YOUR-DOMAIN-HERE.com/sitemap.xml
+Sitemap: https://jessie5599.github.io/sitemap.xml
