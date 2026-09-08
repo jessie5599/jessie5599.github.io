@@ -545,14 +545,37 @@
     }).join('');
   }
 
-  fetch('https://api.rss2json.com/v1/api.json?rss_url=https://rss.blog.naver.com/jessie5599.xml')
-    .then(function(r){ return r.json(); })
+  function renderNewsFromLocalFeed(items){
+    var grid = document.getElementById('news-grid');
+    if(!grid || !items || !items.length) return false;
+    grid.innerHTML = items.map(function(it){
+      return '<a class="news-card" href="' + it.link + '" target="_blank" rel="noopener">' +
+        '<div class="news-thumb"></div>' +
+        '<div class="news-body">' +
+        '<span class="news-date">' + it.label + '</span>' +
+        '<h3>' + it.title + '</h3>' +
+        '</div></a>';
+    }).join('');
+    return true;
+  }
+
+  function loadFromRss2json(){
+    fetch('https://api.rss2json.com/v1/api.json?rss_url=https://rss.blog.naver.com/jessie5599.xml')
+      .then(function(r){ return r.json(); })
+      .then(function(data){
+        if(data.status === 'ok' && data.items && data.items.length){
+          renderNews(data.items);
+        }
+      })
+      .catch(function(){ /* keep static fallback cards already in the page */ });
+  }
+
+  fetch('./blog-feed.json')
+    .then(function(r){ if(!r.ok) throw new Error('no local feed'); return r.json(); })
     .then(function(data){
-      if(data.status === 'ok' && data.items && data.items.length){
-        renderNews(data.items);
-      }
+      if(!renderNewsFromLocalFeed(data.items)) loadFromRss2json();
     })
-    .catch(function(){ /* keep static fallback cards already in the page */ });
+    .catch(function(){ loadFromRss2json(); });
 
   var form = document.getElementById('contact-form');
   if(form){
