@@ -329,22 +329,22 @@ ${NAV_SCRIPT}
       ready: true,
     },
     {
-      name: '어원으로 영단어 뿌시기',
-      desc: '영단어를 어원(뿌리)으로 뜯어보는 시리즈예요.',
+      name: '낯선단어 쪼개보기',
+      desc: '낯선 영단어를 어원(뿌리)으로 쪼개서 뜻을 추론해보는 시리즈예요.',
       href: null,
       count: '준비중',
       ready: false,
     },
     {
-      name: '어법 포인트',
-      desc: '헷갈리는 어법 포인트를 하나씩 짚어보는 시리즈예요.',
+      name: '쏙쏙어법 한 조각',
+      desc: '중등부터 수능까지 이어지는 어법 포인트를 하나씩 짚어보는 시리즈예요.',
       href: null,
       count: '준비중',
       ready: false,
     },
     {
-      name: '까다로운 구문 뿌시기',
-      desc: '도치·생략처럼 까다로운 구문을 뜯어서 설명하는 시리즈예요.',
+      name: '거친구문 길들이기',
+      desc: '도치·생략처럼 날뛰는 구문을 붙잡아 뜯어서 설명하는 시리즈예요.',
       href: null,
       count: '준비중',
       ready: false,
@@ -359,7 +359,7 @@ ${NAV_SCRIPT}
   }).join('\n');
 
   const hubTitle = '콘텐츠 아카이브 | 제씨영어입시학원';
-  const hubDesc = '배경지식 한 스푼, 어원으로 영단어 뿌시기, 어법, 까다로운 구문 뿌시기 시리즈를 모아뒀습니다.';
+  const hubDesc = '배경지식 한 스푼, 낯선단어 쪼개보기, 쏙쏙어법 한 조각, 거친구문 길들이기 시리즈를 모아뒀습니다.';
   const hubCanonical = 'https://jessie5599.github.io/archive.html';
   const hubHtml = `<!doctype html>
 <html lang="ko">
