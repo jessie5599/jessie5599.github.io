@@ -253,14 +253,14 @@ ${HEADER}
   <div class="detail-head">
     <div class="detail-head-top">
       <span class="k-day">Day ${it.day}</span>
-      <a class="back-link" href="../archive.html">← 목록으로 돌아가기</a>
+      <a class="back-link" href="basic-knowledge.html">← 목록으로 돌아가기</a>
     </div>
     <h1>${esc(it.displayTitle)}</h1>
   </div>
   <img class="detail-thumb" src="${it.thumbnail}" referrerpolicy="no-referrer" loading="lazy" alt="${esc(altText)}">
   <p class="detail-summary">${esc(it.summary)}</p>
   <a class="detail-link" href="${it.link}" target="_blank" rel="noopener">네이버 블로그에서 전체 글 보기 →</a>
-  <div><a class="back-link back-link-bottom" href="../archive.html">← 목록으로 돌아가기</a></div>
+  <div><a class="back-link back-link-bottom" href="basic-knowledge.html">← 목록으로 돌아가기</a></div>
 </div>
 ${FOOTER}
 ${NAV_SCRIPT}
@@ -269,29 +269,113 @@ ${NAV_SCRIPT}
     fs.writeFileSync(path.join(OUT_DIR, `${it.day}.html`), html, 'utf8');
   });
 
-  // ---- 목록 페이지 (archive.html, 사이트 루트) ----
+  // ---- 배경지식 한 스푼 목록 페이지 (archive/basic-knowledge.html) ----
   const listRows = [...items].sort((a, b) => b.day - a.day).map((it) => {
     const label = `옥길동 영어학원 제씨영어입시학원 — 배경지식 한 스푼: ${it.displayTitle}`;
-    return `      <li><a href="archive/${it.day}.html"><span class="k-day">Day ${it.day}</span><span class="k-label">${esc(label)}</span></a></li>`;
+    return `      <li><a href="${it.day}.html"><span class="k-day">Day ${it.day}</span><span class="k-label">${esc(label)}</span></a></li>`;
   }).join('\n');
 
   const listTitle = '배경지식 한 스푼 아카이브 | 제씨영어입시학원';
   const listDesc = '옥길동·범박동·소사동 학생들을 위해 국어·영어 지문에 자주 나오는 배경지식을 정리한 아카이브입니다.';
+  const listCanonical = 'https://jessie5599.github.io/archive/basic-knowledge.html';
   const listHtml = `<!doctype html>
+<html lang="ko">
+<head>
+${SITE_HEAD(listTitle, listDesc, listCanonical)}
+<style>
+${SHARED_STYLE}
+  .page-head{padding:40px 0 20px;}
+  .page-head .eyebrow{color:var(--teal);font-weight:600;font-size:13px;letter-spacing:.03em;}
+  .page-head h1{font-size:26px;line-height:1.4;font-weight:600;margin-top:8px;}
+  .page-head p{color:var(--ink-soft);font-size:15px;margin-top:10px;}
+  .back-link{font-size:13.5px;color:var(--ink-soft);display:inline-block;}
+  .k-list{list-style:none;margin:0;padding:0 0 72px;border-top:1px solid var(--line);}
+  .k-list li{border-bottom:1px solid var(--line);}
+  .k-list a{display:flex;align-items:center;gap:12px;padding:14px 4px;font-size:14.5px;font-weight:500;color:var(--navy);transition:color .15s;}
+  .k-list a:hover{color:var(--teal);}
+  .k-list .k-day{flex-shrink:0;display:inline-block;padding:3px 10px;border-radius:12px;font-size:11.5px;font-weight:700;background:var(--teal-soft);color:var(--teal);}
+  .k-list .k-label{flex:1;}
+</style>
+</head>
+<body>
+${HEADER}
+<section class="page-head">
+  <div class="wrap">
+    <a class="back-link" href="../archive.html">← 아카이브 홈으로</a>
+    <span class="eyebrow" style="display:block;margin-top:16px;">ARCHIVE</span>
+    <h1>배경지식 한 스푼 아카이브</h1>
+    <p>지문마다 자주 나오는 배경지식을 하나씩 정리했습니다. 제목을 누르면 자세한 설명을 볼 수 있어요.</p>
+  </div>
+</section>
+<section class="wrap">
+  <ul class="k-list">
+${listRows}
+  </ul>
+</section>
+${FOOTER}
+${NAV_SCRIPT}
+</body>
+</html>`;
+
+  fs.writeFileSync(path.join(OUT_DIR, 'basic-knowledge.html'), listHtml, 'utf8');
+
+  // ---- 아카이브 허브 페이지 (archive.html, 사이트 루트) — 4개 시리즈 카테고리 선택 화면 ----
+  const CATEGORIES = [
+    {
+      name: '배경지식 한 스푼',
+      desc: '국어·영어 지문에 자주 나오는 배경지식을 하나씩 정리했어요.',
+      href: 'archive/basic-knowledge.html',
+      count: `${items.length}편`,
+      ready: true,
+    },
+    {
+      name: '어원으로 영단어 뿌시기',
+      desc: '영단어를 어원(뿌리)으로 뜯어보는 시리즈예요.',
+      href: null,
+      count: '준비중',
+      ready: false,
+    },
+    {
+      name: '어법 포인트',
+      desc: '헷갈리는 어법 포인트를 하나씩 짚어보는 시리즈예요.',
+      href: null,
+      count: '준비중',
+      ready: false,
+    },
+    {
+      name: '까다로운 구문 뿌시기',
+      desc: '도치·생략처럼 까다로운 구문을 뜯어서 설명하는 시리즈예요.',
+      href: null,
+      count: '준비중',
+      ready: false,
+    },
+  ];
+
+  const hubCards = CATEGORIES.map((c) => {
+    const inner = `<div class="hub-card-top"><h3>${esc(c.name)}</h3><span class="hub-count${c.ready ? '' : ' hub-count-soon'}">${esc(c.count)}</span></div><p class="hub-desc">${esc(c.desc)}</p>`;
+    return c.ready
+      ? `      <a class="hub-card" href="${c.href}">${inner}</a>`
+      : `      <div class="hub-card hub-card-disabled">${inner}</div>`;
+  }).join('\n');
+
+  const hubTitle = '콘텐츠 아카이브 | 제씨영어입시학원';
+  const hubDesc = '배경지식 한 스푼, 어원으로 영단어 뿌시기, 어법, 까다로운 구문 뿌시기 시리즈를 모아뒀습니다.';
+  const hubCanonical = 'https://jessie5599.github.io/archive.html';
+  const hubHtml = `<!doctype html>
 <html lang="ko">
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>${esc(listTitle)}</title>
-<meta name="description" content="${esc(listDesc)}">
-<link rel="canonical" href="https://jessie5599.github.io/archive.html">
+<title>${esc(hubTitle)}</title>
+<meta name="description" content="${esc(hubDesc)}">
+<link rel="canonical" href="${hubCanonical}">
 <link rel="icon" type="image/png" href="assets/favicon.png">
 <meta property="og:type" content="website">
 <meta property="og:locale" content="ko_KR">
 <meta property="og:site_name" content="제씨영어입시학원">
-<meta property="og:title" content="${esc(listTitle)}">
-<meta property="og:description" content="${esc(listDesc)}">
-<meta property="og:url" content="https://jessie5599.github.io/archive.html">
+<meta property="og:title" content="${esc(hubTitle)}">
+<meta property="og:description" content="${esc(hubDesc)}">
+<meta property="og:url" content="${hubCanonical}">
 <meta property="og:image" content="https://jessie5599.github.io/assets/og-image.png">
 <meta name="twitter:card" content="summary">
 <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -299,16 +383,23 @@ ${NAV_SCRIPT}
 <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/orioncactus/pretendard@v1.3.9/dist/web/static/pretendard.css">
 <style>
 ${SHARED_STYLE.replace(/\.\.\//g, '')}
-  .page-head{padding:40px 0 20px;}
+  .page-head{padding:48px 0 24px;}
   .page-head .eyebrow{color:var(--teal);font-weight:600;font-size:13px;letter-spacing:.03em;}
-  .page-head h1{font-size:26px;line-height:1.4;font-weight:600;margin-top:8px;}
+  .page-head h1{font-size:28px;line-height:1.4;font-weight:600;margin-top:8px;}
   .page-head p{color:var(--ink-soft);font-size:15px;margin-top:10px;}
-  .k-list{list-style:none;margin:0;padding:0 0 72px;border-top:1px solid var(--line);}
-  .k-list li{border-bottom:1px solid var(--line);}
-  .k-list a{display:flex;align-items:center;gap:12px;padding:14px 4px;font-size:14.5px;font-weight:500;color:var(--navy);transition:color .15s;}
-  .k-list a:hover{color:var(--teal);}
-  .k-list .k-day{flex-shrink:0;display:inline-block;padding:3px 10px;border-radius:12px;font-size:11.5px;font-weight:700;background:var(--teal-soft);color:var(--teal);}
-  .k-list .k-label{flex:1;}
+  .hub-grid{display:grid;grid-template-columns:repeat(2,1fr);gap:18px;padding:8px 0 72px;}
+  @media(max-width:640px){ .hub-grid{grid-template-columns:1fr;} }
+  .hub-card{
+    display:block;background:var(--paper);border:1px solid var(--line);border-radius:8px;
+    padding:22px;transition:box-shadow .2s, transform .2s;
+  }
+  a.hub-card:hover{box-shadow:0 10px 24px rgba(27,42,65,0.09);transform:translateY(-2px);}
+  .hub-card-disabled{opacity:.6;}
+  .hub-card-top{display:flex;align-items:center;justify-content:space-between;gap:10px;margin-bottom:8px;}
+  .hub-card h3{font-size:17px;font-weight:600;}
+  .hub-count{flex-shrink:0;font-size:11.5px;font-weight:700;padding:3px 10px;border-radius:12px;background:var(--teal-soft);color:var(--teal);}
+  .hub-count-soon{background:var(--line);color:var(--ink-soft);}
+  .hub-desc{font-size:13.5px;color:var(--ink-soft);line-height:1.6;margin:0;}
 </style>
 </head>
 <body>
@@ -334,14 +425,14 @@ ${SHARED_STYLE.replace(/\.\.\//g, '')}
 <section class="page-head">
   <div class="wrap">
     <span class="eyebrow">ARCHIVE</span>
-    <h1>배경지식 한 스푼 아카이브</h1>
-    <p>지문마다 자주 나오는 배경지식을 하나씩 정리했습니다. 제목을 누르면 자세한 설명을 볼 수 있어요.</p>
+    <h1>콘텐츠 아카이브</h1>
+    <p>제씨영어입시학원이 꾸준히 쌓아가는 시리즈들을 카테고리별로 모아뒀어요. 카드를 누르면 해당 시리즈 목록으로 이동합니다.</p>
   </div>
 </section>
 <section class="wrap">
-  <ul class="k-list">
-${listRows}
-  </ul>
+  <div class="hub-grid">
+${hubCards}
+  </div>
 </section>
 <footer>
   <div class="wrap footer-inner">
@@ -353,7 +444,7 @@ ${NAV_SCRIPT}
 </body>
 </html>`;
 
-  fs.writeFileSync(path.join(SITE_ROOT, 'archive.html'), listHtml, 'utf8');
+  fs.writeFileSync(path.join(SITE_ROOT, 'archive.html'), hubHtml, 'utf8');
 
   // ---- sitemap.xml 갱신: 기존 항목은 보존하고 아카이브 URL만 다시 씀 ----
   const sitemapPath = path.join(SITE_ROOT, 'sitemap.xml');
@@ -362,12 +453,13 @@ ${NAV_SCRIPT}
     .filter((u) => !u.includes('/archive'));
   const archiveUrls = [
     `  <url>\n    <loc>https://jessie5599.github.io/archive.html</loc>\n    <changefreq>weekly</changefreq>\n    <priority>0.8</priority>\n  </url>`,
+    `  <url>\n    <loc>https://jessie5599.github.io/archive/basic-knowledge.html</loc>\n    <changefreq>weekly</changefreq>\n    <priority>0.8</priority>\n  </url>`,
     ...items.map((it) => `  <url>\n    <loc>https://jessie5599.github.io/archive/${it.day}.html</loc>\n    <changefreq>monthly</changefreq>\n    <priority>0.6</priority>\n  </url>`),
   ];
   const sitemap = `<?xml version="1.0" encoding="UTF-8"?>\n<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">\n${nonArchiveUrls.join('\n')}\n${archiveUrls.join('\n')}\n</urlset>\n`;
   fs.writeFileSync(sitemapPath, sitemap, 'utf8');
 
-  console.log('완료:', items.length, '개 상세 페이지 + 목록 페이지 1개 + sitemap.xml 갱신');
+  console.log('완료:', items.length, '개 상세 페이지 + 목록 페이지 1개 + 허브 페이지 1개 + sitemap.xml 갱신');
 }
 
 main().catch((err) => { console.error(err); process.exit(1); });

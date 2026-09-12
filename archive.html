@@ -3,15 +3,15 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>배경지식 한 스푼 아카이브 | 제씨영어입시학원</title>
-<meta name="description" content="옥길동·범박동·소사동 학생들을 위해 국어·영어 지문에 자주 나오는 배경지식을 정리한 아카이브입니다.">
+<title>콘텐츠 아카이브 | 제씨영어입시학원</title>
+<meta name="description" content="배경지식 한 스푼, 어원으로 영단어 뿌시기, 어법, 까다로운 구문 뿌시기 시리즈를 모아뒀습니다.">
 <link rel="canonical" href="https://jessie5599.github.io/archive.html">
 <link rel="icon" type="image/png" href="assets/favicon.png">
 <meta property="og:type" content="website">
 <meta property="og:locale" content="ko_KR">
 <meta property="og:site_name" content="제씨영어입시학원">
-<meta property="og:title" content="배경지식 한 스푼 아카이브 | 제씨영어입시학원">
-<meta property="og:description" content="옥길동·범박동·소사동 학생들을 위해 국어·영어 지문에 자주 나오는 배경지식을 정리한 아카이브입니다.">
+<meta property="og:title" content="콘텐츠 아카이브 | 제씨영어입시학원">
+<meta property="og:description" content="배경지식 한 스푼, 어원으로 영단어 뿌시기, 어법, 까다로운 구문 뿌시기 시리즈를 모아뒀습니다.">
 <meta property="og:url" content="https://jessie5599.github.io/archive.html">
 <meta property="og:image" content="https://jessie5599.github.io/assets/og-image.png">
 <meta name="twitter:card" content="summary">
@@ -60,16 +60,23 @@
   .footer-inner .brand{color:#B9C2CE;}
   .footer-inner .brand span{color:var(--teal);}
 
-  .page-head{padding:40px 0 20px;}
+  .page-head{padding:48px 0 24px;}
   .page-head .eyebrow{color:var(--teal);font-weight:600;font-size:13px;letter-spacing:.03em;}
-  .page-head h1{font-size:26px;line-height:1.4;font-weight:600;margin-top:8px;}
+  .page-head h1{font-size:28px;line-height:1.4;font-weight:600;margin-top:8px;}
   .page-head p{color:var(--ink-soft);font-size:15px;margin-top:10px;}
-  .k-list{list-style:none;margin:0;padding:0 0 72px;border-top:1px solid var(--line);}
-  .k-list li{border-bottom:1px solid var(--line);}
-  .k-list a{display:flex;align-items:center;gap:12px;padding:14px 4px;font-size:14.5px;font-weight:500;color:var(--navy);transition:color .15s;}
-  .k-list a:hover{color:var(--teal);}
-  .k-list .k-day{flex-shrink:0;display:inline-block;padding:3px 10px;border-radius:12px;font-size:11.5px;font-weight:700;background:var(--teal-soft);color:var(--teal);}
-  .k-list .k-label{flex:1;}
+  .hub-grid{display:grid;grid-template-columns:repeat(2,1fr);gap:18px;padding:8px 0 72px;}
+  @media(max-width:640px){ .hub-grid{grid-template-columns:1fr;} }
+  .hub-card{
+    display:block;background:var(--paper);border:1px solid var(--line);border-radius:8px;
+    padding:22px;transition:box-shadow .2s, transform .2s;
+  }
+  a.hub-card:hover{box-shadow:0 10px 24px rgba(27,42,65,0.09);transform:translateY(-2px);}
+  .hub-card-disabled{opacity:.6;}
+  .hub-card-top{display:flex;align-items:center;justify-content:space-between;gap:10px;margin-bottom:8px;}
+  .hub-card h3{font-size:17px;font-weight:600;}
+  .hub-count{flex-shrink:0;font-size:11.5px;font-weight:700;padding:3px 10px;border-radius:12px;background:var(--teal-soft);color:var(--teal);}
+  .hub-count-soon{background:var(--line);color:var(--ink-soft);}
+  .hub-desc{font-size:13.5px;color:var(--ink-soft);line-height:1.6;margin:0;}
 </style>
 </head>
 <body>
@@ -95,36 +102,17 @@
 <section class="page-head">
   <div class="wrap">
     <span class="eyebrow">ARCHIVE</span>
-    <h1>배경지식 한 스푼 아카이브</h1>
-    <p>지문마다 자주 나오는 배경지식을 하나씩 정리했습니다. 제목을 누르면 자세한 설명을 볼 수 있어요.</p>
+    <h1>콘텐츠 아카이브</h1>
+    <p>제씨영어입시학원이 꾸준히 쌓아가는 시리즈들을 카테고리별로 모아뒀어요. 카드를 누르면 해당 시리즈 목록으로 이동합니다.</p>
   </div>
 </section>
 <section class="wrap">
-  <ul class="k-list">
-      <li><a href="archive/23.html"><span class="k-day">Day 23</span><span class="k-label">옥길동 영어학원 제씨영어입시학원 — 배경지식 한 스푼: 대표성휴리스틱결합오류</span></a></li>
-      <li><a href="archive/22.html"><span class="k-day">Day 22</span><span class="k-label">옥길동 영어학원 제씨영어입시학원 — 배경지식 한 스푼: 여키스도슨법칙</span></a></li>
-      <li><a href="archive/21.html"><span class="k-day">Day 21</span><span class="k-label">옥길동 영어학원 제씨영어입시학원 — 배경지식 한 스푼: 이중처리이론</span></a></li>
-      <li><a href="archive/20.html"><span class="k-day">Day 20</span><span class="k-label">옥길동 영어학원 제씨영어입시학원 — 배경지식 한 스푼: 유니버설 디자인</span></a></li>
-      <li><a href="archive/19.html"><span class="k-day">Day 19</span><span class="k-label">옥길동 영어학원 제씨영어입시학원 — 배경지식 한 스푼: 촉매와 활성화 에너지</span></a></li>
-      <li><a href="archive/18.html"><span class="k-day">Day 18</span><span class="k-label">옥길동 영어학원 제씨영어입시학원 — 배경지식 한 스푼: 법실증주의</span></a></li>
-      <li><a href="archive/17.html"><span class="k-day">Day 17</span><span class="k-label">옥길동 영어학원 제씨영어입시학원 — 배경지식 한 스푼: 매체결정론</span></a></li>
-      <li><a href="archive/16.html"><span class="k-day">Day 16</span><span class="k-label">옥길동 영어학원 제씨영어입시학원 — 배경지식 한 스푼: 밀란코비치 주기</span></a></li>
-      <li><a href="archive/15.html"><span class="k-day">Day 15</span><span class="k-label">옥길동 영어학원 제씨영어입시학원 — 배경지식 한 스푼: 본인-대리인 문제(레몬마켓)</span></a></li>
-      <li><a href="archive/14.html"><span class="k-day">Day 14</span><span class="k-label">옥길동 영어학원 제씨영어입시학원 — 배경지식 한 스푼: 신호이론</span></a></li>
-      <li><a href="archive/13.html"><span class="k-day">Day 13</span><span class="k-label">옥길동 영어학원 제씨영어입시학원 — 배경지식 한 스푼: 콜링우드의 재연</span></a></li>
-      <li><a href="archive/12.html"><span class="k-day">Day 12</span><span class="k-label">옥길동 영어학원 제씨영어입시학원 — 배경지식 한 스푼: 숭고미</span></a></li>
-      <li><a href="archive/11.html"><span class="k-day">Day 11</span><span class="k-label">옥길동 영어학원 제씨영어입시학원 — 배경지식 한 스푼: 약동학</span></a></li>
-      <li><a href="archive/10.html"><span class="k-day">Day 10</span><span class="k-label">옥길동 영어학원 제씨영어입시학원 — 배경지식 한 스푼: 구조인류학</span></a></li>
-      <li><a href="archive/9.html"><span class="k-day">Day 9</span><span class="k-label">옥길동 영어학원 제씨영어입시학원 — 배경지식 한 스푼: 현장성</span></a></li>
-      <li><a href="archive/8.html"><span class="k-day">Day 8</span><span class="k-label">옥길동 영어학원 제씨영어입시학원 — 배경지식 한 스푼: 후성유전학</span></a></li>
-      <li><a href="archive/7.html"><span class="k-day">Day 7</span><span class="k-label">옥길동 영어학원 제씨영어입시학원 — 배경지식 한 스푼: 낙인이론</span></a></li>
-      <li><a href="archive/6.html"><span class="k-day">Day 6</span><span class="k-label">옥길동 영어학원 제씨영어입시학원 — 배경지식 한 스푼: 대위법</span></a></li>
-      <li><a href="archive/5.html"><span class="k-day">Day 5</span><span class="k-label">옥길동 영어학원 제씨영어입시학원 — 배경지식 한 스푼: 음성 피드백과 양성 피드백</span></a></li>
-      <li><a href="archive/4.html"><span class="k-day">Day 4</span><span class="k-label">옥길동 영어학원 제씨영어입시학원 — 배경지식 한 스푼: 사피어-워프 가설</span></a></li>
-      <li><a href="archive/3.html"><span class="k-day">Day 3</span><span class="k-label">옥길동 영어학원 제씨영어입시학원 — 배경지식 한 스푼: 베이즈 정리</span></a></li>
-      <li><a href="archive/2.html"><span class="k-day">Day 2</span><span class="k-label">옥길동 영어학원 제씨영어입시학원 — 배경지식 한 스푼: 블록체인의 합의 알고리즘</span></a></li>
-      <li><a href="archive/1.html"><span class="k-day">Day 1</span><span class="k-label">옥길동 영어학원 제씨영어입시학원 — 배경지식 한 스푼: 정보 엔트로피</span></a></li>
-  </ul>
+  <div class="hub-grid">
+      <a class="hub-card" href="archive/basic-knowledge.html"><div class="hub-card-top"><h3>배경지식 한 스푼</h3><span class="hub-count">23편</span></div><p class="hub-desc">국어·영어 지문에 자주 나오는 배경지식을 하나씩 정리했어요.</p></a>
+      <div class="hub-card hub-card-disabled"><div class="hub-card-top"><h3>어원으로 영단어 뿌시기</h3><span class="hub-count hub-count-soon">준비중</span></div><p class="hub-desc">영단어를 어원(뿌리)으로 뜯어보는 시리즈예요.</p></div>
+      <div class="hub-card hub-card-disabled"><div class="hub-card-top"><h3>어법 포인트</h3><span class="hub-count hub-count-soon">준비중</span></div><p class="hub-desc">헷갈리는 어법 포인트를 하나씩 짚어보는 시리즈예요.</p></div>
+      <div class="hub-card hub-card-disabled"><div class="hub-card-top"><h3>까다로운 구문 뿌시기</h3><span class="hub-count hub-count-soon">준비중</span></div><p class="hub-desc">도치·생략처럼 까다로운 구문을 뜯어서 설명하는 시리즈예요.</p></div>
+  </div>
 </section>
 <footer>
   <div class="wrap footer-inner">
