@@ -251,7 +251,8 @@
     display:flex;flex-direction:column;
   }
   .news-thumb{
-    height:150px;background:linear-gradient(135deg,var(--navy),var(--teal));
+    height:150px;width:100%;object-fit:cover;display:block;
+    background:linear-gradient(135deg,var(--navy),var(--teal));
   }
   .news-body{padding:20px;}
   .news-date{color:var(--ink-soft);font-size:12.5px;margin-bottom:8px;display:block;}
@@ -603,8 +604,11 @@
     var grid = document.getElementById('news-grid');
     if(!grid || !items || !items.length) return false;
     grid.innerHTML = items.map(function(it){
+      var thumb = it.thumbnail
+        ? '<img class="news-thumb" src="' + it.thumbnail + '" referrerpolicy="no-referrer" loading="lazy" alt="' + it.label + ' 썸네일">'
+        : '<div class="news-thumb"></div>';
       return '<a class="news-card" href="' + it.link + '" target="_blank" rel="noopener">' +
-        '<div class="news-thumb"></div>' +
+        thumb +
         '<div class="news-body">' +
         '<span class="news-date">' + it.label + '</span>' +
         '<h3>' + it.title + '</h3>' +

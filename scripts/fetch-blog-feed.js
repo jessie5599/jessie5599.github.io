@@ -28,6 +28,11 @@ function getTag(block, tag) {
   return m ? decodeEntities(m[1].trim()) : '';
 }
 
+function extractThumbnail(description) {
+  const m = description.match(/<img[^>]+src="([^"]+)"/);
+  return m ? m[1] : '';
+}
+
 async function main() {
   const res = await fetch('https://rss.blog.naver.com/jessie5599.xml');
   if (!res.ok) throw new Error('RSS fetch failed: ' + res.status);
@@ -39,13 +44,14 @@ async function main() {
     title: getTag(block, 'title'),
     link: getTag(block, 'link'),
     pubDate: getTag(block, 'pubDate'),
+    thumbnail: extractThumbnail(getTag(block, 'description')),
   }));
 
   const picked = [];
   for (const key of CATEGORY_ORDER) {
     const found = items.find((it) => it.category === key);
     if (found) {
-      picked.push({ label: CATEGORY_LABEL[key], title: cleanTitle(found.title), link: found.link });
+      picked.push({ label: CATEGORY_LABEL[key], title: cleanTitle(found.title), link: found.link, thumbnail: found.thumbnail });
     }
   }
 
