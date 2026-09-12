@@ -109,7 +109,24 @@
     background:var(--orange);color:#fff;padding:9px 18px;border-radius:3px;
     font-size:14px;font-weight:600;white-space:nowrap;
   }
-  @media(max-width:760px){ .navlinks{display:none;} }
+  .nav-right{display:flex;align-items:center;gap:12px;}
+  .nav-toggle{
+    display:none;flex-direction:column;justify-content:center;gap:5px;
+    width:32px;height:32px;background:none;border:none;cursor:pointer;padding:0;
+  }
+  .nav-toggle span{display:block;width:100%;height:2px;background:var(--navy);border-radius:2px;}
+  @media(max-width:760px){
+    .nav-toggle{display:flex;}
+    .navlinks{
+      display:none;position:absolute;top:100%;left:0;right:0;
+      flex-direction:column;gap:0;background:var(--paper);
+      border-bottom:1px solid var(--line);padding:4px 24px 12px;
+      box-shadow:0 8px 16px rgba(0,0,0,0.06);
+    }
+    .navlinks.open{display:flex;}
+    .navlinks a{padding:12px 4px;border-bottom:1px solid var(--line);}
+    .navlinks a:last-child{border-bottom:none;}
+  }
 
   /* Hero */
   .hero{
@@ -291,14 +308,19 @@
 <header>
   <div class="nav">
     <div class="brand">제씨<span>영어</span>입시학원</div>
-    <nav class="navlinks">
+    <nav class="navlinks" id="navlinks">
       <a href="#about">학원소개</a>
       <a href="#director">원장소개</a>
       <a href="#curriculum">커리큘럼</a>
       <a href="#locations">학원안내</a>
       <a href="#news">소식</a>
     </nav>
-    <a href="#contact" class="nav-cta">상담 신청</a>
+    <div class="nav-right">
+      <a href="#contact" class="nav-cta">상담 신청</a>
+      <button class="nav-toggle" id="navToggle" aria-label="메뉴 열기" aria-expanded="false">
+        <span></span><span></span><span></span>
+      </button>
+    </div>
   </div>
 </header>
 
@@ -636,6 +658,24 @@
       });
     });
   }
+})();
+</script>
+
+<script>
+(function(){
+  var toggle = document.getElementById('navToggle');
+  var links = document.getElementById('navlinks');
+  if(!toggle || !links) return;
+  toggle.addEventListener('click', function(){
+    var isOpen = links.classList.toggle('open');
+    toggle.setAttribute('aria-expanded', isOpen ? 'true' : 'false');
+  });
+  links.querySelectorAll('a').forEach(function(a){
+    a.addEventListener('click', function(){
+      links.classList.remove('open');
+      toggle.setAttribute('aria-expanded', 'false');
+    });
+  });
 })();
 </script>
 
