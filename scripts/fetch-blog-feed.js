@@ -28,18 +28,36 @@ function getTag(block, tag) {
   return m ? decodeEntities(m[1].trim()) : '';
 }
 
+function extractThumbnail(description) {
+  const m = description.match(/<img[^>]+src="([^"]+)"/);
+  return m ? m[1] : '';
+}
+
+function extractExcerpt(description) {
+  let text = description.replace(/<img[^>]*>/g, '');
+  text = text.replace(/<[^>]+>/g, ' ');
+  text = decodeEntities(text).replace(/\s+/g, ' ').trim();
+  if (text.length > 90) text = text.slice(0, 90).trim() + '...';
+  return text;
+}
+
 async function main() {
   const res = await fetch('https://rss.blog.naver.com/jessie5599.xml');
   if (!res.ok) throw new Error('RSS fetch failed: ' + res.status);
   const xml = await res.text();
 
   const itemBlocks = xml.match(/<item>[\s\S]*?<\/item>/g) || [];
-  const items = itemBlocks.map((block) => ({
-    category: getTag(block, 'category').replace(/^[■□]\s*/, ''),
-    title: getTag(block, 'title'),
-    link: getTag(block, 'link'),
-    pubDate: getTag(block, 'pubDate'),
-  }));
+  const items = itemBlocks.map((block) => {
+    const description = getTag(block, 'description');
+    return {
+      category: getTag(block, 'category').replace(/^[■□]\s*/, ''),
+      title: getTag(block, 'title'),
+      link: getTag(block, 'link'),
+      pubDate: getTag(block, 'pubDate'),
+      thumbnail: extractThumbnail(description),
+      excerpt: extractExcerpt(description),
+    };
+  });
 
   const picked = [];
   for (const key of CATEGORY_ORDER) {
@@ -53,11 +71,23 @@ async function main() {
     throw new Error('No matching categories found in feed — check category names in the RSS');
   }
 
+  const archive = items
+    .filter((it) => CATEGORY_LABEL[it.category])
+    .map((it) => ({
+      label: CATEGORY_LABEL[it.category],
+      title: cleanTitle(it.title),
+      link: it.link,
+      pubDate: it.pubDate,
+      thumbnail: it.thumbnail,
+      excerpt: it.excerpt,
+    }))
+    .sort((a, b) => new Date(b.pubDate) - new Date(a.pubDate));
+
   fs.writeFileSync(
     'blog-feed.json',
-    JSON.stringify({ updatedAt: new Date().toISOString(), items: picked }, null, 2) + '\n'
+    JSON.stringify({ updatedAt: new Date().toISOString(), items: picked, archive }, null, 2) + '\n'
   );
-  console.log('Wrote blog-feed.json with', picked.length, 'items');
+  console.log('Wrote blog-feed.json with', picked.length, 'teaser items and', archive.length, 'archive items');
 }
 
 main().catch((err) => {
