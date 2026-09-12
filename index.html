@@ -604,8 +604,9 @@
     var grid = document.getElementById('news-grid');
     if(!grid || !items || !items.length) return false;
     grid.innerHTML = items.map(function(it){
+      var altText = '옥길동 영어학원 제씨영어입시학원 - ' + it.title;
       var thumb = it.thumbnail
-        ? '<img class="news-thumb" src="' + it.thumbnail + '" referrerpolicy="no-referrer" loading="lazy" alt="' + it.label + ' 썸네일">'
+        ? '<img class="news-thumb" src="' + it.thumbnail + '" referrerpolicy="no-referrer" loading="lazy" alt="' + altText + '">'
         : '<div class="news-thumb"></div>';
       return '<a class="news-card" href="' + it.link + '" target="_blank" rel="noopener">' +
         thumb +
