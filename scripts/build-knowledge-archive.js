@@ -331,9 +331,9 @@ ${NAV_SCRIPT}
     {
       name: '낯선단어 쪼개보기',
       desc: '낯선 영단어를 어원(뿌리)으로 쪼개서 뜻을 추론해보는 시리즈예요.',
-      href: null,
-      count: '준비중',
-      ready: false,
+      href: 'archive/word-breakdown.html',
+      count: '1편',
+      ready: true,
     },
     {
       name: '쏙쏙어법 한 조각',
@@ -455,6 +455,10 @@ ${NAV_SCRIPT}
     `  <url>\n    <loc>https://jessie5599.github.io/archive.html</loc>\n    <changefreq>weekly</changefreq>\n    <priority>0.8</priority>\n  </url>`,
     `  <url>\n    <loc>https://jessie5599.github.io/archive/basic-knowledge.html</loc>\n    <changefreq>weekly</changefreq>\n    <priority>0.8</priority>\n  </url>`,
     ...items.map((it) => `  <url>\n    <loc>https://jessie5599.github.io/archive/${it.day}.html</loc>\n    <changefreq>monthly</changefreq>\n    <priority>0.6</priority>\n  </url>`),
+    // 낯선단어 쪼개보기 시리즈 — 이 스크립트가 관리하는 게 아니라 수동으로 만든 페이지지만,
+    // sitemap 재생성이 "/archive" 포함 항목을 전부 지우고 다시 쓰기 때문에 여기서 같이 챙겨야 안 없어진다.
+    `  <url>\n    <loc>https://jessie5599.github.io/archive/word-breakdown.html</loc>\n    <changefreq>weekly</changefreq>\n    <priority>0.8</priority>\n  </url>`,
+    `  <url>\n    <loc>https://jessie5599.github.io/archive/word-breakdown-1.html</loc>\n    <changefreq>monthly</changefreq>\n    <priority>0.6</priority>\n  </url>`,
   ];
   const sitemap = `<?xml version="1.0" encoding="UTF-8"?>\n<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">\n${nonArchiveUrls.join('\n')}\n${archiveUrls.join('\n')}\n</urlset>\n`;
   fs.writeFileSync(sitemapPath, sitemap, 'utf8');
