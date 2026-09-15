@@ -59,13 +59,13 @@ async function main() {
   let items = itemBlocks.map((block) => {
     const description = getTag(block, 'description');
     return {
-      category: getTag(block, 'category').replace(/^[■□]\s*/, ''),
+      category: getTag(block, 'category').replace(/^[■□●]\s*/, ''),
       title: cleanTitle(getTag(block, 'title')),
       link: getTag(block, 'link'),
       pubDate: getTag(block, 'pubDate'),
       thumbnail: extractThumbnail(description),
     };
-  }).filter((it) => it.category === '지식한스푼');
+  }).filter((it) => it.category === '지식한스푼' || it.category === '배경지식한스푼');
 
   items.sort((a, b) => new Date(a.pubDate) - new Date(b.pubDate));
   items.forEach((it, idx) => { it.day = idx + 1; it.displayTitle = displayTitleOf(it.title); });
@@ -345,9 +345,9 @@ ${NAV_SCRIPT}
     {
       name: '거친구문 길들이기',
       desc: '도치·생략처럼 날뛰는 구문을 붙잡아 뜯어서 설명하는 시리즈예요.',
-      href: null,
-      count: '준비중',
-      ready: false,
+      href: 'archive/rough-syntax.html',
+      count: '1편',
+      ready: true,
     },
   ];
 
@@ -462,6 +462,9 @@ ${NAV_SCRIPT}
     // 쏙쏙어법 한 조각 시리즈 — 마찬가지로 수동으로 만든 페이지, sitemap 재생성 시 같이 챙겨야 안 없어진다.
     `  <url>\n    <loc>https://jessie5599.github.io/archive/soksok-grammar.html</loc>\n    <changefreq>weekly</changefreq>\n    <priority>0.8</priority>\n  </url>`,
     `  <url>\n    <loc>https://jessie5599.github.io/archive/soksok-grammar-1.html</loc>\n    <changefreq>monthly</changefreq>\n    <priority>0.6</priority>\n  </url>`,
+    // 거친구문 길들이기 시리즈 — 마찬가지로 수동으로 만든 페이지, sitemap 재생성 시 같이 챙겨야 안 없어진다.
+    `  <url>\n    <loc>https://jessie5599.github.io/archive/rough-syntax.html</loc>\n    <changefreq>weekly</changefreq>\n    <priority>0.8</priority>\n  </url>`,
+    `  <url>\n    <loc>https://jessie5599.github.io/archive/rough-syntax-1.html</loc>\n    <changefreq>monthly</changefreq>\n    <priority>0.6</priority>\n  </url>`,
   ];
   const sitemap = `<?xml version="1.0" encoding="UTF-8"?>\n<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">\n${nonArchiveUrls.join('\n')}\n${archiveUrls.join('\n')}\n</urlset>\n`;
   fs.writeFileSync(sitemapPath, sitemap, 'utf8');
