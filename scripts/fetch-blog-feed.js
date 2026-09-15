@@ -5,8 +5,9 @@ const CATEGORY_LABEL = {
   '고등부': '고등부',
   '중등부': '중등부',
   '지식한스푼': '배경지식 한 스푼',
+  '배경지식한스푼': '배경지식 한 스푼',
 };
-const CATEGORY_ORDER = ['제씨영어소식', '고등부', '중등부', '지식한스푼'];
+const CATEGORY_ORDER = ['제씨영어소식', '고등부', '중등부', '지식한스푼', '배경지식한스푼'];
 
 function cleanTitle(title) {
   title = title.replace(/^[^|]*\|\s*/, '');
@@ -40,7 +41,7 @@ async function main() {
 
   const itemBlocks = xml.match(/<item>[\s\S]*?<\/item>/g) || [];
   const items = itemBlocks.map((block) => ({
-    category: getTag(block, 'category').replace(/^[■□]\s*/, ''),
+    category: getTag(block, 'category').replace(/^[■□●]\s*/, ''),
     title: getTag(block, 'title'),
     link: getTag(block, 'link'),
     pubDate: getTag(block, 'pubDate'),
@@ -48,10 +49,14 @@ async function main() {
   }));
 
   const picked = [];
+  const pickedLabels = new Set();
   for (const key of CATEGORY_ORDER) {
+    const label = CATEGORY_LABEL[key];
+    if (pickedLabels.has(label)) continue;
     const found = items.find((it) => it.category === key);
     if (found) {
-      picked.push({ label: CATEGORY_LABEL[key], title: cleanTitle(found.title), link: found.link, thumbnail: found.thumbnail });
+      picked.push({ label, title: cleanTitle(found.title), link: found.link, thumbnail: found.thumbnail });
+      pickedLabels.add(label);
     }
   }
 
