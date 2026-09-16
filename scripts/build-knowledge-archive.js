@@ -138,7 +138,7 @@ async function main() {
 <meta property="og:title" content="${esc(title)}">
 <meta property="og:description" content="${esc(description)}">
 <meta property="og:url" content="${canonical}">
-<meta property="og:image" content="https://jessie5599.github.io/assets/og-image.png">
+<meta property="og:image" content="https://jessie5599.github.io/assets/og-image-v2.png">
 <meta name="twitter:card" content="summary">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link href="https://fonts.googleapis.com/css2?family=Gowun+Dodum&display=swap" rel="stylesheet">
@@ -376,7 +376,7 @@ ${NAV_SCRIPT}
 <meta property="og:title" content="${esc(hubTitle)}">
 <meta property="og:description" content="${esc(hubDesc)}">
 <meta property="og:url" content="${hubCanonical}">
-<meta property="og:image" content="https://jessie5599.github.io/assets/og-image.png">
+<meta property="og:image" content="https://jessie5599.github.io/assets/og-image-v2.png">
 <meta name="twitter:card" content="summary">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link href="https://fonts.googleapis.com/css2?family=Gowun+Dodum&display=swap" rel="stylesheet">
