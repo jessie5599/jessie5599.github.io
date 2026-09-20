@@ -280,8 +280,8 @@ ${NAV_SCRIPT}
     fs.writeFileSync(path.join(OUT_DIR, `${it.day}.html`), html, 'utf8');
   });
 
-  // ---- 배경지식 한 스푼 목록 페이지 (basic-knowledge.html, basic-knowledge-2.html, ...) : 한 페이지 25개씩, 최신순 ----
-  const PER_PAGE = 25;
+  // ---- 배경지식 한 스푼 목록 페이지 (basic-knowledge.html, basic-knowledge-2.html, ...) : 한 페이지 15개씩, 최신순 ----
+  const PER_PAGE = 15;
   const sortedDesc = [...items].sort((a, b) => b.day - a.day);
   const totalPages = Math.max(1, Math.ceil(sortedDesc.length / PER_PAGE));
   const pageFile = (n) => (n === 1 ? 'basic-knowledge.html' : `basic-knowledge-${n}.html`);
