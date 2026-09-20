@@ -1,0 +1,184 @@
+[
+ {
+  "day": 1,
+  "displayTitle": "정보 엔트로피",
+  "thumbnail": "https://blogthumb.pstatic.net/MjAyNjA4MjJfOTMg/MDAxNzg3Mzc5MDUzMDUx._UMjYaSR4mzQiGDBzRW7uoj6BNbjUdXGLYJfbRo1nu4g.luSQUreBYvly9scMFYmJQV7qoh_mP8mx6k3Ggf46U1sg.PNG/01-cover.png?type=s3",
+  "summary": "오늘은 '정보 엔트로피'를 알아볼게요. 반반 확률로 나오는 동전과 항상 앞면만 나오는 동전이 있을 때, 둘 다에게 앞면이 나왔다고 알려주면 정보의 무게가 같을까요? 반반 동전의 결과는 예측할 수 없었으니 진짜 새로운 소식이지만, 항상 앞면만 나오는 동전의 결과는 이미 알고 있던 뻔한 얘기예요. 수학자 섀넌은 확률이 낮은, 그러니까 예상하지 못한 사건일수록 더 많은 정보량을 담고 있다고 정의했고, 이 정보량을 평균 낸 값을 엔트로피라고 불렀어요. 모든 결과가 똑같은 확률일 때 엔트로피는 최대가 되고, 결과가 거의 정해져 있으면 최소가 돼요.",
+  "link": "https://blog.naver.com/jessie5599/224382516628?fromRss=true&trackingCode=rss"
+ },
+ {
+  "day": 2,
+  "displayTitle": "블록체인의 합의 알고리즘",
+  "thumbnail": "https://blogthumb.pstatic.net/MjAyNjA4MjJfMzUg/MDAxNzg3Mzc5MDI3ODE0.mn_4-J-1rlMi35-ijOTmdZWpqp5ERX_-Nf8wUVFiqv4g.mP34qsjzrve0TnSh_QK8L6rxdgwyvnV8mQjLjcoOjkUg.PNG/01-cover.png?type=s3",
+  "summary": "오늘은 '블록체인의 합의 알고리즘'을 알아볼게요. 여러 장군이 적을 포위했는데 그중 몇몇은 배신자일 수도 있는 상황에서, 서로 믿지 못한 채로 어떻게 공격 시점에 합의할 수 있을까요? 이걸 비잔틴 장군 문제라고 하는데, 은행 없이도 낯선 사람들끼리 거래 기록을 신뢰하게 만드는 블록체인의 핵심 배경이에요. 작업증명은 어려운 연산을 가장 먼저 푼 사람에게 기록 권한을 줘서 속이는 데 드는 비용을 키우고, 지분증명은 자산을 걸게 해서 거짓 기록을 승인하면 그 자산을 잃게 만들어요. 결국 두 방식 모두 정직함을 배신하는 것보다 비싸게 만드는 장치인 거예요.",
+  "link": "https://blog.naver.com/jessie5599/224383501394?fromRss=true&trackingCode=rss"
+ },
+ {
+  "day": 3,
+  "displayTitle": "베이즈 정리",
+  "thumbnail": "https://blogthumb.pstatic.net/MjAyNjA4MjJfMjE0/MDAxNzg3Mzc4OTk5ODI5.X_f1J2yMqir9zB8XRXBxOsZZayHv0qh4dGCKph9FZIsg.NNEMhM_YvlYRW5YPyNFcjhMsfcoR8rLF-7mUUtOUWyUg.PNG/01-cover.png?type=s3",
+  "summary": "오늘은 '베이즈 정리'를 알아볼게요. 어떤 병의 검사 정확도가 99퍼센트이고 실제 유병률은 0.1퍼센트일 때, 검사에서 양성이 나왔다면 진짜로 병에 걸렸을 확률은 얼마일까요? 직관적으로는 99퍼센트에 가까울 것 같지만, 실제로 계산하면 10퍼센트도 안 돼요. 이 반직관적인 결과를 설명하는 게 베이즈 정리예요. 증거를 만나기 전 가진 믿음을 사전확률, 새로운 증거를 반영해 다시 계산한 믿음을 사후확률이라고 하는데, 사전확률이 아주 낮으면 아무리 강력한 증거가 나와도 사후확률이 크게 오르지 않아요.",
+  "link": "https://blog.naver.com/jessie5599/224384473060?fromRss=true&trackingCode=rss"
+ },
+ {
+  "day": 4,
+  "displayTitle": "사피어-워프 가설",
+  "thumbnail": "https://blogthumb.pstatic.net/MjAyNjA4MjJfNTcg/MDAxNzg3Mzc4OTY4NjM1._P4gu0NMYx4pI9p4l9IPmm1IKUmTJNdxEjgBd6NuZ6Ug.D1YOdjAsSyL1yNWRadTS5KFZjBCzJvNhwc3abvrYvv0g.PNG/01-cover.png?type=s3",
+  "summary": "오늘은 '사피어-워프 가설'을 알아볼게요. 언어학자 워프는 원래 화재 감식관이었는데, 노동자들이 빈 휘발유 통 앞에서는 담배를 피우면서도 가득 찬 통 앞에서는 조심한다는 걸 발견했어요. 그런데 실제로는 증기가 남은 빈 통이 더 위험했죠. 워프는 이게 비어 있다는 단어가 만든 심리적 안도감 때문이라고 봤고, 여기서 언어가 사고를 결정하거나 적어도 강하게 영향을 준다는 가설을 세웠어요. 언어가 사고를 완전히 규정한다고 보면 언어결정론, 사고의 경향성에 영향을 줄 뿐이라고 보면 언어상대성이라고 해요.",
+  "link": "https://blog.naver.com/jessie5599/224385683888?fromRss=true&trackingCode=rss"
+ },
+ {
+  "day": 5,
+  "displayTitle": "음성 피드백과 양성 피드백",
+  "thumbnail": "https://blogthumb.pstatic.net/MjAyNjA4MjJfMjQ5/MDAxNzg3Mzc4ODkwMTEz.aScCWUEILiDZvaOpinhnj326SyvX7jYOyqAZJzUVr_wg.u68cmfc47oRY1DykwyJ61Rvf6-wdly2at7ZcIT-LH10g.PNG/01-cover.png?type=s3",
+  "summary": "오늘은 '음성 피드백과 양성 피드백'을 알아볼게요. 방 안 온도가 오르면 에어컨이 세게 돌다가 목표 온도에 가까워지면 약해지는 것처럼, 결과가 목표에서 벗어난 만큼 반대 방향으로 끌어당겨 원래 상태로 되돌리는 걸 음성 피드백이라고 해요. 반대로 마이크를 스피커 가까이 대면 소리가 점점 커지다 결국 삐 소리가 나는 것처럼, 벗어난 방향으로 계속 밀어붙여 변화를 더 키우는 걸 양성 피드백이라고 해요. 우리 몸의 체온 조절은 음성 피드백 덕분에 안정을 유지하지만, 출산할 때 자궁 수축 신호가 점점 강해지는 건 양성 피드백이 작동하는 대표적인 예예요. 생태계나 경제 시스템도 평소엔 음성 피드백으로 균형을 지키다가, 특정 임계점을 넘으면 양성 피드백이 우세해지면서 갑작스러운 붕괴나 급변이 일어나기도 해요.",
+  "link": "https://blog.naver.com/jessie5599/224386552421?fromRss=true&trackingCode=rss"
+ },
+ {
+  "day": 6,
+  "displayTitle": "대위법",
+  "thumbnail": "https://blogthumb.pstatic.net/MjAyNjA4MjJfMjIz/MDAxNzg3Mzg0MjA4Nzk5.IC7DpsXIrj5Ci-IFL0g1cVyHhqry3a4rGb2Ej1igLlYg.plURKEMqrMTQjnWSP4Exf90yKRpJ34MWT6EGTegyuXIg.PNG/01-cover.png?type=s3",
+  "summary": "오늘은 '대위법'을 알아볼게요. 바흐의 푸가를 연주할 때, 오른손과 왼손은 서로 다른 선율을 동시에 연주하는데도 둘 다 완결된 노래로 들려요. 이렇게 여러 선율이 각자의 목소리를 지키면서도 함께 어우러지게 만드는 기법이 대위법이에요. 화성학이 여러 음을 세로로 쌓아 화음에 집중한다면, 대위법은 각 선율을 가로로 유려하게 흐르게 하는 데 집중해요. 그래서 화성학은 수직적 사고, 대위법은 수평적 사고로 비유되곤 해요.",
+  "link": "https://blog.naver.com/jessie5599/224386672672?fromRss=true&trackingCode=rss"
+ },
+ {
+  "day": 7,
+  "displayTitle": "낙인이론",
+  "thumbnail": "https://blogthumb.pstatic.net/MjAyNjA4MjNfMjMx/MDAxNzg3NDE2NDYwOTU5.Hp4GVS5jNnzxyTlQbVn5g5PrtHr8Hw69OqME1J2VqqQg.qIt8T3oPvJGWwZ1WkKfnANDd2id0M8PGwzpTkIuEHMQg.PNG/01-cover.png?type=s3",
+  "summary": "오늘은 '낙인이론'을 알아볼게요. 똑같이 수업 시간에 떠들었는데, 왜 어떤 학생은 그냥 활발하다는 말을 듣고, 어떤 학생은 문제아라는 말을 듣게 될까요? 사회학자 베커는 일탈이 행동 자체에 담긴 성질이 아니라, 사회가 그 행동에 일탈이라는 이름표를 붙이는 과정에서 만들어진다고 봤어요. 한번 낙인이 찍히면, 달라진 시선 속에서 스스로 그 정체성을 받아들이고 행동을 반복하게 되는데, 이걸 이차적 일탈이라고 해요.",
+  "link": "https://blog.naver.com/jessie5599/224387039540?fromRss=true&trackingCode=rss"
+ },
+ {
+  "day": 8,
+  "displayTitle": "후성유전학",
+  "thumbnail": "https://blogthumb.pstatic.net/MjAyNjA4MjRfMjk1/MDAxNzg3NTUyOTE1MjYw.A7y4nyGCq1znCdRa2a5bEeYdns8AonZOUGS7gwzJXV8g.tGfKgicY5xKJjkUtyq1JsdRTzmaGTgJJ5Gl1JxIn89Ag.PNG/title.png?type=s3",
+  "summary": "오늘은 '후성유전학'을 알아볼게요. 일란성 쌍둥이는 DNA 염기서열이 사실상 똑같은데, 왜 마흔이 되면 한쪽은 더 건강하고 다른 쪽은 당뇨나 특정 암에 걸리기도 할까요? 과학자들은 유전자의 서열 자체는 그대로여도, 그 유전자가 언제 얼마나 활발하게 작동하는지는 얼마든지 달라질 수 있다는 걸 밝혀냈어요. 흡연이나 스트레스, 식습관 같은 환경 요인이 유전자에 스위치를 걸어 켜거나 끌 수 있다는 거예요. 이렇게 DNA 서열의 변화 없이 유전자 발현이 조절되는 현상을 연구하는 분야가 후성유전학이고, 이 변화 중 일부는 다음 세대로 전달되기도 해요.",
+  "link": "https://blog.naver.com/jessie5599/224389667059?fromRss=true&trackingCode=rss"
+ },
+ {
+  "day": 9,
+  "displayTitle": "현장성",
+  "thumbnail": "https://blogthumb.pstatic.net/MjAyNjA4MjVfMjcz/MDAxNzg3NjQyNTQ5OTgz.6mYAn-pTpcVX6gEeyeam_yd9Kcfn9jnpmeYrgOfdMV4g.PT2pp4yUo3WpFJxd0pScqWSmD8PkNMaqkMDqX0EmtGog.PNG/01-cover.png?type=s3",
+  "summary": "오늘은 '현장성'을 알아볼게요. 같은 노래, 같은 가수의 4K 콘서트 영상을 집에서 봐도, 왜 그 자리에 있던 사람만 느꼈던 떨림은 전달되지 않을까요? 지금, 여기서만 일어나고 다시는 똑같이 반복될 수 없는 공연예술의 성질을 현장성이라고 해요. 발터 벤야민은 복제 기술이 발달하면서 예술 작품의 원본이 가진 고유한 아우라가 사라진다고 봤어요. 반면 이론가 오슬랜더는, 방송 기술이 없던 시절엔 모든 공연이 당연히 현장이었기 때문에 현장성이라는 개념 자체가 필요 없었다고 봐요.",
+  "link": "https://blog.naver.com/jessie5599/224389819373?fromRss=true&trackingCode=rss"
+ },
+ {
+  "day": 10,
+  "displayTitle": "구조인류학",
+  "thumbnail": "https://blogthumb.pstatic.net/MjAyNjA4MjZfMjAw/MDAxNzg3NzQyMjQzNzQ3.ik9EmKOAFzGvX6ZFqrFjGuzTqc0-iFUfE2PBaeMXmTMg.1duplTCUvYIPZ0Xk__Y_WWSfNKB3vaCzmj1XhEEIPgEg.PNG/title.png?type=s3",
+  "summary": "오늘은 '구조인류학'을 알아볼게요. 서로 만난 적도, 언어도 다른 두 대륙의 원주민 신화가 왜 이렇게 닮았을까요? 인류학자 레비스트로스는 신화 속에 삶 대 죽음, 자연 대 문화 같은 대립쌍이 반복된다는 걸 발견했어요. 그리고 이게 우연이 아니라, 신화나 문화 현상 밑에 공통된 인간 정신의 문법이 있기 때문이라고 봤어요. 문화마다 겉모습은 달라도, 그걸 만들어내는 논리 구조는 인류 전체에 공통적이라는 거예요.",
+  "link": "https://blog.naver.com/jessie5599/224392131680?fromRss=true&trackingCode=rss"
+ },
+ {
+  "day": 11,
+  "displayTitle": "약동학",
+  "thumbnail": "https://blogthumb.pstatic.net/MjAyNjA4MjdfMjM3/MDAxNzg3ODI1MjM3Nzg2.GIOEEiaGV8plstZWMY4ibABFSVd43sx74JLrJ6TbtRsg.2f-tiSp_Q9rnFWs-Xzflm7Yc0euyoAs3RP6egadRy9Ag.PNG/01-cover.png?type=s3",
+  "summary": "오늘은 '약동학'을 알아볼게요. 감기약은 왜 하루 세 번, 정해진 시간에 먹어야 할까요? 몸속 약물 농도는 시간이 지나며 계속 변하는데, 농도가 너무 낮으면 약효가 없고 너무 높으면 부작용이 생겨요. 그래서 약효가 나는 최소 농도와 독성이 시작되는 최대 농도 사이, 이 적당한 구간을 계속 유지해야 해요. 약동학은 이 농도 변화를 수학적으로 예측하고 설계하는 학문이에요. 이 구간이 좁은 약일수록 정해진 용량과 시간을 정확히 지키는 게 중요해져요.",
+  "link": "https://blog.naver.com/jessie5599/224392337162?fromRss=true&trackingCode=rss"
+ },
+ {
+  "day": 12,
+  "displayTitle": "숭고미",
+  "thumbnail": "https://blogthumb.pstatic.net/MjAyNjA4MjhfMzkg/MDAxNzg3OTExNjU2ODA1.hOi-Hz68kF1io5N64CXFdgA_COtOIO_VCfZrSciAxKUg.USCMMs55OPtTmdLPrB46-7VgpIZ7biY9WH6FdmWyK7Mg.PNG/title.png?type=s3",
+  "summary": "오늘은 '숭고미'를 알아볼게요. 거대한 폭포나 몰아치는 폭풍우 앞에 서면, 무섭다고 느끼면서도 그 자리를 떠나지 못하고 압도당하죠. 철학자 에드먼드 버크는 이 낯선 감정에 '숭고'라는 이름을 붙였어요. 아름다움이 우리를 편안하게 하는 감정이라면, 숭고는 우리를 압도하면서도 묘하게 끌어당기는 감정이에요. 낭만주의 화가들이 잔잔한 풍경 대신 거대한 폭풍을 그린 이유도 바로 이 숭고미 때문이었어요.",
+  "link": "https://blog.naver.com/jessie5599/224393502182?fromRss=true&trackingCode=rss"
+ },
+ {
+  "day": 13,
+  "displayTitle": "콜링우드의 재연",
+  "thumbnail": "https://blogthumb.pstatic.net/MjAyNjA4MjlfMTkx/MDAxNzg4MDA2NjE3OTk0.KGxzANfQIevQJk-SFXJD8H4YgbKiYH7bUoljUAW2W68g.8Q3DkdZKrclYfdUOQYZ6Aupmm-SrFgmlVlM40yy_RD4g.PNG/title.png?type=s3",
+  "summary": "오늘은 콜링우드의 '재연' 이론을 알아볼게요. 기원전 49년, 카이사르는 루비콘 강을 건넜어요. 그런데 우리가 정말 궁금한 건, 그가 왜 그런 선택을 했는가 하는 판단이잖아요. 그 판단은 이미 2천 년 전에 사라져버렸는데, 역사가는 대체 무엇을 근거로 그걸 안다고 말할 수 있을까요? 역사가 랑케는 사료를 엄밀히 검증하면 사실에 도달할 수 있다고 봤지만, 철학자 콜링우드는 반대했어요. 역사적 사건은 단순한 행위가 아니라, 그 사람의 생각이 겉으로 드러난 결과라는 거예요. 역사가는 사실을 발견하는 사람일까요, 재구성하는 해석자일까요.",
+  "link": "https://blog.naver.com/jessie5599/224394468474?fromRss=true&trackingCode=rss"
+ },
+ {
+  "day": 14,
+  "displayTitle": "신호이론",
+  "thumbnail": "https://blogthumb.pstatic.net/MjAyNjA4MzFfMjE1/MDAxNzg4MTU5NzY1NzI3.3KQ5GgGsHJr-WyXJKpK_Ra6e5zMbjKlqgdc3wG1N9S0g.IU2BhOan-PuEWKaD13KNOT9LfiS5aAaY47zpueQo3Akg.PNG/title.png?type=s3",
+  "summary": "오늘은 '신호이론'을 알아볼게요. 중고차 시장에 멀쩡한 차와 결함 있는 차가 있는데, 판매자만 그 사실을 알고 구매자는 몰라요. 이런 상황이 반복되면 결국 멀쩡한 차 주인만 시장을 떠나고 불량품만 남게 돼요. 경제학자 스펜스는 이 문제를, 정보를 가진 쪽이 스스로 비용을 들여 자기 능력을 증명하는 행동으로 풀 수 있다고 봤어요. 이걸 신호라고 해요. 반대로 정보가 없는 쪽이 상대가 스스로 정보를 드러내게 만드는 건 선별이라고 하고요.",
+  "link": "https://blog.naver.com/jessie5599/224396351076?fromRss=true&trackingCode=rss"
+ },
+ {
+  "day": 15,
+  "displayTitle": "본인-대리인 문제(레몬마켓)",
+  "thumbnail": "https://blogthumb.pstatic.net/MjAyNjA4MzFfNTMg/MDAxNzg4MTY5OTI3MjY1.Ko7fQgbPHLFMACEEs61qni_5GQe17IIMD3P0JUtpk_cg.SIBx6XrE4kiRmny7xdNK2pBD1CkaaPvwnJAVe475Qhwg.PNG/01-cover.png?type=s3",
+  "summary": "오늘은 '본인-대리인 문제'를 알아볼게요. 주주는 회사를 직접 경영하지 않고 전문경영인을 고용해요. 그런데 이 경영인이 회사 돈으로 호화로운 사옥을 짓는다면 어떨까요? 주주에게는 손해지만 경영인에게는 합리적인 선택일 수 있어요. 이렇게 일을 맡긴 사람과 맡은 사람의 목표가 다르고, 감시가 불완전할 때 생기는 문제를 본인-대리인 문제라고 해요. 주주와 경영인, 국민과 정치인처럼 우리 사회 곳곳에서 반복되는 구조예요.",
+  "link": "https://blog.naver.com/jessie5599/224396373228?fromRss=true&trackingCode=rss"
+ },
+ {
+  "day": 16,
+  "displayTitle": "밀란코비치 주기",
+  "thumbnail": "https://blogthumb.pstatic.net/MjAyNjA5MDJfMTAx/MDAxNzg4MzI4MzMzMjQ3.IERAXSMBivd2OE2Sd3gYrf0I-1hViv94gnTwAYoomu4g.lIcVI5LEywv9uyvbrAzZdzKbI2rcyDqtppI_AFDNGLYg.PNG/title.png?type=s3",
+  "summary": "오늘은 '밀란코비치 주기'를 알아볼게요. 제1차 세계대전 중 포로로 잡혀있던 천문학자 밀란코비치는, 지구가 왜 수만 년마다 빙하기를 반복하는지를 연구했어요. 그는 지구 공전 궤도의 모양과 자전축의 기울기, 흔들림처럼 미세한 천문학적 변화가 쌓이면 특정 지역이 받는 햇빛의 양이 달라지고, 이게 지구 전체 기후를 바꿀 수 있다는 걸 밝혀냈어요. 오늘날의 지구온난화가 한 세기 만에 인간이 만든 변화라면, 밀란코비치 주기는 수만 년에 걸친 자연적인 변화라는 점에서 달라요.",
+  "link": "https://blog.naver.com/jessie5599/224398552332?fromRss=true&trackingCode=rss"
+ },
+ {
+  "day": 17,
+  "displayTitle": "매체결정론",
+  "thumbnail": "https://blogthumb.pstatic.net/MjAyNjA5MDJfMzIg/MDAxNzg4MzUyNDcwNTg5.pLuDTUPtoW9ffJmxLfkafCSF1gSUABbCPvB--LPhQUkg.awMsy5pF0Hs0UfPV4gkinHDv2pcggBhfc4xA9HX9vocg.PNG/title.png?type=s3",
+  "summary": "오늘은 '매체결정론'을 알아볼게요. 1960년 미국 대선 토론에서, 라디오 청취자들은 닉슨이 낫다고 했지만 텔레비전 시청자들은 케네디가 낫다고 평가했어요. 내용은 같았는데 전달하는 그릇이 판단을 바꿔버린 거예요. 이렇게 매체 자체가 인간의 인식과 사회를 결정한다고 보는 입장이 매체결정론이에요.",
+  "link": "https://blog.naver.com/jessie5599/224398964682?fromRss=true&trackingCode=rss"
+ },
+ {
+  "day": 18,
+  "displayTitle": "법실증주의",
+  "thumbnail": "https://blogthumb.pstatic.net/MjAyNjA5MDNfMTE4/MDAxNzg4NDE1NTAyMTY0.hzJkKdyyoelXhBxbjcmeIZ2RfUwzT6Ga9OVTcO1E6qIg.GVKalNVMTY-qVToWzl56IKppPYspINDAQfcu9CxrW-cg.PNG/title.png?type=s3",
+  "summary": "오늘은 '법실증주의'를 알아볼게요. 나치 시절, 한 여성이 당시 시행 중이던 법에 따라 남편을 신고했어요. 전쟁이 끝난 뒤, 이 여성을 처벌할 수 있을까요? 그 법은 절차상 분명 유효한 법이었거든요. 법철학자 라드브루흐는 이 질문 앞에서, 참을 수 없을 정도로 부정의한 법은 애초에 법이 아니라고 답을 바꿨어요. 법실증주의는 법의 효력이 도덕이 아니라 정해진 절차와 사회적 승인에 달려있다고 보는 입장이에요. 그래서 나쁜 법도 법일 수 있다고 말해요.",
+  "link": "https://blog.naver.com/jessie5599/224399775570?fromRss=true&trackingCode=rss"
+ },
+ {
+  "day": 19,
+  "displayTitle": "촉매와 활성화 에너지",
+  "thumbnail": "https://blogthumb.pstatic.net/MjAyNjA5MDRfMjg5/MDAxNzg4NTE1NDE2NTg1.M4Z3ENBogkrEoqyu7MMuaa8n4mdFB-TODA3rMu0hjFog.OcQq_cBM1LJO9pf8MH33x54lTVk5vImnvg9kw17kmgwg.PNG/title.png?type=s3",
+  "summary": "오늘은 '촉매와 활성화 에너지'를 알아볼게요. 산 정상으로 가는 길에 험한 고갯길이 있다면, 촉매는 그 옆에 터널을 뚫어주는 존재예요. 터널 덕분에 훨씬 빠르고 쉽게 정상에 도달하지만, 정상의 위치나 높이 자체는 전혀 바뀌지 않아요. 촉매는 반응의 속도만 바꿀 뿐, 반응의 결과인 평형 상태는 전혀 바꾸지 못한다는 뜻이에요. 반면 온도나 농도를 바꾸면 속도뿐 아니라 평형의 위치 자체도 달라져요. 촉매는 오직 얼마나 빨리 도착하는가에만 관여한다는 게 핵심이에요.",
+  "link": "https://blog.naver.com/jessie5599/224401189035?fromRss=true&trackingCode=rss"
+ },
+ {
+  "day": 20,
+  "displayTitle": "유니버설 디자인",
+  "thumbnail": "https://blogthumb.pstatic.net/MjAyNjA5MDRfOSAg/MDAxNzg4NTIxMTY5MDIz.bViQXE_N5QmQby710of2JvZomc19LXxEMCoMg6gVn6Ag.YpV-TxF8YP5tzBoXcvkjI7MMhiWBvY4LYuan5ryowgkg.PNG/01-cover.png?type=s3",
+  "summary": "오늘은 '유니버설 디자인'을 알아볼게요. 평생 휠체어를 사용했던 건축가 로널드 메이스는, 대부분의 건물이 계단 위주로 설계된 걸 보며 물었어요. 장애인을 위해 경사로를 따로 덧붙이는 대신, 처음부터 모두가 쓸 수 있게 설계하면 안 될까? 이 질문에서 나온 게 유니버설 디자인이에요. 나이나 신체 조건과 무관하게 최대한 많은 사람이 별도 개조 없이 쓸 수 있게 처음부터 설계하는 방식이죠. 이미 지어진 곳에 나중에 시설을 더하는 배리어프리와는, 사전이냐 사후냐에서 갈려요.",
+  "link": "https://blog.naver.com/jessie5599/224401244412?fromRss=true&trackingCode=rss"
+ },
+ {
+  "day": 21,
+  "displayTitle": "이중처리이론",
+  "thumbnail": "https://blogthumb.pstatic.net/MjAyNjA5MDRfMTQ2/MDAxNzg4NTIyODQ3NTY4.V7EY2I_x3ZiniB6gSSW5gyw9jHhMPim8mCNgm90KVE0g.t_GaNI5hTVF7bwVYzzQInz-2rJqBOrPEvtE5EVGOgu0g.PNG/01-cover.png?type=s3",
+  "summary": "오늘은 '이중처리이론'을 알아볼게요. 2 더하기 2는 생각할 겨를도 없이 답이 나오지만, 17 곱하기 24는 멈춰서 계산해야 하죠. 이 두 질문에 답하는 방식이 완전히 다르다는 데서, 심리학자들은 우리 머릿속에 서로 다른 두 개의 사고 시스템이 있다고 봤어요. 노벨상을 받은 심리학자 카너먼은 이걸 시스템 1과 시스템 2라고 불렀어요. 시스템 1은 빠르고 자동적인 직관이고, 시스템 2는 느리고 의식적인 논리적 분석이에요. 일상적인 판단은 대부분 시스템 1이 처리하고, 시스템 2는 의심스러울 때만 나서요.",
+  "link": "https://blog.naver.com/jessie5599/224401263772?fromRss=true&trackingCode=rss"
+ },
+ {
+  "day": 22,
+  "displayTitle": "여키스도슨법칙",
+  "thumbnail": "https://blogthumb.pstatic.net/MjAyNjA5MDVfOTEg/MDAxNzg4NjAyNzEzMjc0.4twSrxb1JrMOhw0KQj475gYjRS58EE6QSt7qW_kA3DQg.ExkJAnEHWud-elJDyQtlzG2qexa0-Gy3u2YKPsZ6Xacg.PNG/title.png?type=s3",
+  "summary": "오늘은 '여키스-도슨 법칙'을 알아볼게요. 1908년, 심리학자들이 쥐를 미로에 넣고 전기 자극을 주는 실험을 했어요. 자극이 너무 약해도, 너무 강해도 쥐는 길을 잘 찾지 못했어요. 가장 빨리 탈출한 건 적당히 긴장한 쥐들이었죠. 각성 수준과 수행 능력의 관계를 그리면 완만한 역 유자 곡선이 나와요. 너무 낮아도 너무 높아도 수행은 떨어지고, 중간 어딘가에 최고의 지점이 있다는 뜻이에요. 흥미로운 건, 쉬운 과제일수록 최적 지점이 높고, 어려운 과제일수록 낮다는 거예요.",
+  "link": "https://blog.naver.com/jessie5599/224402028976?fromRss=true&trackingCode=rss"
+ },
+ {
+  "day": 23,
+  "displayTitle": "대표성휴리스틱결합오류",
+  "thumbnail": "https://blogthumb.pstatic.net/MjAyNjA5MDZfMjc5/MDAxNzg4Njg4Mzc4MzA2.02SU7LoV6_3KwQNn_hdD7v6V7pFOJzTjbIObVqDkP_4g.pEGNN-IuXNU5yJ6g8V2Htfojd9bMdC3IAhZg5bzcvlwg.PNG/01-cover.png?type=s3",
+  "summary": "오늘은 '대표성 휴리스틱과 결합 오류'를 알아볼게요. '린다는 31세이고 독신이며 사회 정의에 관심이 많다'는 설명을 들으면, 사람들은 린다가 그냥 은행원이기보다 '은행원이면서 페미니스트'일 가능성이 더 높다고 답해요. 그런데 이건 명백한 오류예요. 은행원이면서 페미니스트인 사람은 은행원 전체의 일부일 뿐이라, 그 확률이 은행원일 확률을 넘어설 수 없거든요. 심리학자 카너먼과 트버스키는 이야기가 구체적이고 그럴듯하게 느껴질수록, 사람들이 실제 확률 법칙을 무시하고 판단한다는 걸 밝혀냈어요. 이야기가 정교해질수록 설득력은 커지지만, 그게 확률적으로 맞다는 뜻은 아니라는 거예요.",
+  "link": "https://blog.naver.com/jessie5599/224402803691?fromRss=true&trackingCode=rss"
+ },
+ {
+  "day": 24,
+  "displayTitle": "하이젠베르크불확정성원리",
+  "thumbnail": "https://blogthumb.pstatic.net/MjAyNjA5MDhfMTU1/MDAxNzg4ODQ1MDQ0NDQy.Szsnk7ehXjJdi5HSJc0H7bWtnV6MdYGjNAGAyxD85Pgg.AmZhu8L-odf4RZxNmHQQWMM0q109-1qxRtMa1kGXdGcg.PNG/title.png?type=s3",
+  "summary": "오늘은 '하이젠베르크의 불확정성 원리'를 알아볼게요. 전자의 위치를 정확히 보려면 파장이 짧은 빛을 써야 하는데, 그러면 에너지가 커서 전자의 운동량이 튕겨나가요. 반대로 파장이 긴 빛을 쓰면 운동량은 지킬 수 있지만 위치는 흐릿해져요. 위치와 운동량, 이 둘을 동시에 정확히 알 수는 없다는 거예요. 1927년 하이젠베르크가 밝혀낸 이 원리는, 미시 세계에서는 관찰 자체가 대상을 바꿔버린다는 걸 보여줘요.",
+  "link": "https://blog.naver.com/jessie5599/224404838675?fromRss=true&trackingCode=rss"
+ },
+ {
+  "day": 25,
+  "displayTitle": "이중코딩",
+  "thumbnail": "https://blogthumb.pstatic.net/MjAyNjA5MDlfMTAg/MDAxNzg4OTQ3NzkwMDk1.MpAHo16mg2rUNjksZWy8V6zKJAWD3xRNi_igKGZf8P4g.8dq2SUyCdTMT8pPIZsTrKt4h1oldfHXoyOXjiIOAGwMg.PNG/01-cover.png?type=s3",
+  "summary": "포스트모던 건축의 이중코딩은, 전문가와 대중이라는 두 청중에게 동시에 말을 거는 균형의 기술입니다.",
+  "link": "https://blog.naver.com/jessie5599/224406294294?fromRss=true&trackingCode=rss"
+ },
+ {
+  "day": 26,
+  "displayTitle": "형태추종기능",
+  "thumbnail": "https://blogthumb.pstatic.net/MjAyNjA5MTBfNDMg/MDAxNzg5MDIwMzU1NjIx.Z3BHC8eEnaUoEGWrgaCTp1RqW1GnaFWN6DDCUmel4Pwg.SouPNbR0AFb9Bgl25FYjAviPv5Oq2S8wCMCtfRrgaEUg.PNG/title.png?type=s3",
+  "summary": "형태추종기능은 형태가 기능에서 논리적으로 도출되어야 한다는 근대 건축의 원칙입니다.",
+  "link": "https://blog.naver.com/jessie5599/224407220716?fromRss=true&trackingCode=rss"
+ }
+]

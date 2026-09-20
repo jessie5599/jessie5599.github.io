@@ -68,7 +68,15 @@ async function main() {
   }).filter((it) => it.category === '지식한스푼' || it.category === '배경지식한스푼');
 
   items.sort((a, b) => new Date(a.pubDate) - new Date(b.pubDate));
-  items.forEach((it, idx) => { it.day = idx + 1; it.displayTitle = displayTitleOf(it.title); });
+  // RSS는 최근 글 50개만 주기 때문에, 오래된 글이 피드에서 빠지면 Day 번호가 밀린다.
+  // 그래서 이미 만든 회차는 scripts/archive-items.json에 저장해 두고(번호 고정), RSS에서 새로 나온 글만 뒤에 이어 붙인다.
+  const CACHE_PATH = path.join(__dirname, 'archive-items.json');
+  const cache = fs.existsSync(CACHE_PATH) ? JSON.parse(fs.readFileSync(CACHE_PATH, 'utf8')) : [];
+  const keyOf = (l) => String(l).split('?')[0];
+  const knownKeys = new Set(cache.map((c) => keyOf(c.link)));
+  const fresh = items.filter((it) => !knownKeys.has(keyOf(it.link)));
+  let nextDay = cache.reduce((m, c) => Math.max(m, c.day), 0) + 1;
+  fresh.forEach((it) => { it.day = nextDay++; it.displayTitle = displayTitleOf(it.title); });
 
   // 내레이션/초안 텍스트 매칭
   const narrationFiles = fs.readdirSync(NARRATIONS_DIR).filter((f) => f.endsWith('.txt'));
@@ -104,7 +112,7 @@ async function main() {
     return [...topicKeys].sort((a, b) => b.length - a.length).find((k) => norm.includes(normalize(k)));
   }
 
-  items.forEach((it) => {
+  fresh.forEach((it) => {
     const topic = matchTopic(it.title);
     it.topic = topic || null;
     if (SUMMARY_OVERRIDES[topic]) {
@@ -118,7 +126,10 @@ async function main() {
     }
   });
 
-  const missing = items.filter((it) => !it.summary);
+  items = [...cache, ...fresh];
+  fs.writeFileSync(CACHE_PATH, JSON.stringify(items.map((it) => ({ day: it.day, displayTitle: it.displayTitle, thumbnail: it.thumbnail, summary: it.summary, link: it.link })), null, 1));
+
+  const missing = fresh.filter((it) => !it.summary);
   if (missing.length) {
     console.warn('경고: 요약을 찾지 못한 항목', missing.map((m) => `Day ${m.day} ${m.title}`));
   }
@@ -346,7 +357,7 @@ ${NAV_SCRIPT}
       name: '거친구문 길들이기',
       desc: '도치·생략처럼 날뛰는 구문을 붙잡아 뜯어서 설명하는 시리즈예요.',
       href: 'archive/rough-syntax.html',
-      count: '1편',
+      count: '2편',
       ready: true,
     },
   ];
@@ -467,6 +478,7 @@ ${NAV_SCRIPT}
     // 거친구문 길들이기 시리즈 — 마찬가지로 수동으로 만든 페이지, sitemap 재생성 시 같이 챙겨야 안 없어진다.
     `  <url>\n    <loc>https://jessie5599.github.io/archive/rough-syntax.html</loc>\n    <changefreq>weekly</changefreq>\n    <priority>0.8</priority>\n  </url>`,
     `  <url>\n    <loc>https://jessie5599.github.io/archive/rough-syntax-1.html</loc>\n    <changefreq>monthly</changefreq>\n    <priority>0.6</priority>\n  </url>`,
+    `  <url>\n    <loc>https://jessie5599.github.io/archive/rough-syntax-2.html</loc>\n    <changefreq>monthly</changefreq>\n    <priority>0.6</priority>\n  </url>`,
   ];
   const sitemap = `<?xml version="1.0" encoding="UTF-8"?>\n<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">\n${nonArchiveUrls.join('\n')}\n${archiveUrls.join('\n')}\n</urlset>\n`;
   fs.writeFileSync(sitemapPath, sitemap, 'utf8');
