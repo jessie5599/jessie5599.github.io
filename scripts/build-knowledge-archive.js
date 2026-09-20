@@ -280,16 +280,33 @@ ${NAV_SCRIPT}
     fs.writeFileSync(path.join(OUT_DIR, `${it.day}.html`), html, 'utf8');
   });
 
-  // ---- 배경지식 한 스푼 목록 페이지 (archive/basic-knowledge.html) ----
-  const listRows = [...items].sort((a, b) => b.day - a.day).map((it) => {
-    const label = `옥길동 영어학원 제씨영어입시학원 — 배경지식 한 스푼: ${it.displayTitle}`;
-    return `      <li><a href="${it.day}.html"><span class="k-day">Day ${it.day}</span><span class="k-label">${esc(label)}</span></a></li>`;
-  }).join('\n');
-
-  const listTitle = '배경지식 한 스푼 아카이브 | 제씨영어입시학원';
+  // ---- 배경지식 한 스푼 목록 페이지 (basic-knowledge.html, basic-knowledge-2.html, ...) : 한 페이지 25개씩, 최신순 ----
+  const PER_PAGE = 25;
+  const sortedDesc = [...items].sort((a, b) => b.day - a.day);
+  const totalPages = Math.max(1, Math.ceil(sortedDesc.length / PER_PAGE));
+  const pageFile = (n) => (n === 1 ? 'basic-knowledge.html' : `basic-knowledge-${n}.html`);
   const listDesc = '옥길동·범박동·소사동 학생들을 위해 국어·영어 지문에 자주 나오는 배경지식을 정리한 아카이브입니다.';
-  const listCanonical = 'https://jessie5599.github.io/archive/basic-knowledge.html';
-  const listHtml = `<!doctype html>
+
+  for (let pg = 1; pg <= totalPages; pg++) {
+    const listRows = sortedDesc.slice((pg - 1) * PER_PAGE, pg * PER_PAGE).map((it) => {
+      const label = `옥길동 영어학원 제씨영어입시학원 — 배경지식 한 스푼: ${it.displayTitle}`;
+      return `      <li><a href="${it.day}.html"><span class="k-day">Day ${it.day}</span><span class="k-label">${esc(label)}</span></a></li>`;
+    }).join('\n');
+
+    let pager = '';
+    if (totalPages > 1) {
+      const parts = [];
+      if (pg > 1) parts.push(`<a href="${pageFile(pg - 1)}" rel="prev">이전</a>`);
+      for (let n = 1; n <= totalPages; n++) {
+        parts.push(n === pg ? `<span class="cur" aria-current="page">${n}</span>` : `<a href="${pageFile(n)}">${n}</a>`);
+      }
+      if (pg < totalPages) parts.push(`<a href="${pageFile(pg + 1)}" rel="next">다음</a>`);
+      pager = `\n<nav class="pager" aria-label="페이지 이동">${parts.join('')}</nav>`;
+    }
+
+    const listTitle = pg === 1 ? '배경지식 한 스푼 아카이브 | 제씨영어입시학원' : `배경지식 한 스푼 아카이브 (${pg}페이지) | 제씨영어입시학원`;
+    const listCanonical = `https://jessie5599.github.io/archive/${pageFile(pg)}`;
+    const listHtml = `<!doctype html>
 <html lang="ko">
 <head>
 ${SITE_HEAD(listTitle, listDesc, listCanonical)}
@@ -306,6 +323,10 @@ ${SHARED_STYLE}
   .k-list a:hover{color:var(--teal);}
   .k-list .k-day{flex-shrink:0;display:inline-block;padding:3px 10px;border-radius:12px;font-size:11.5px;font-weight:700;background:var(--teal-soft);color:var(--teal);}
   .k-list .k-label{flex:1;}
+  .pager{display:flex;justify-content:center;flex-wrap:wrap;gap:6px;padding:0 0 72px;}
+  .pager a,.pager span{min-width:36px;padding:8px 12px;text-align:center;border:1px solid var(--line);border-radius:6px;font-size:14px;background:var(--paper);color:var(--navy);}
+  .pager a:hover{border-color:var(--teal);color:var(--teal);}
+  .pager .cur{background:var(--teal);border-color:var(--teal);color:#fff;font-weight:700;}
 </style>
 </head>
 <body>
@@ -319,16 +340,16 @@ ${HEADER}
   </div>
 </section>
 <section class="wrap">
-  <ul class="k-list">
+  <ul class="k-list"${totalPages > 1 ? ' style="padding-bottom:32px"' : ''}>
 ${listRows}
-  </ul>
+  </ul>${pager}
 </section>
 ${FOOTER}
 ${NAV_SCRIPT}
 </body>
 </html>`;
-
-  fs.writeFileSync(path.join(OUT_DIR, 'basic-knowledge.html'), listHtml, 'utf8');
+    fs.writeFileSync(path.join(OUT_DIR, pageFile(pg)), listHtml, 'utf8');
+  }
 
   // ---- 아카이브 허브 페이지 (archive.html, 사이트 루트) — 4개 시리즈 카테고리 선택 화면 ----
   const CATEGORIES = [
@@ -465,6 +486,7 @@ ${NAV_SCRIPT}
   const archiveUrls = [
     `  <url>\n    <loc>https://jessie5599.github.io/archive.html</loc>\n    <changefreq>weekly</changefreq>\n    <priority>0.8</priority>\n  </url>`,
     `  <url>\n    <loc>https://jessie5599.github.io/archive/basic-knowledge.html</loc>\n    <changefreq>weekly</changefreq>\n    <priority>0.8</priority>\n  </url>`,
+    ...Array.from({ length: totalPages - 1 }, (_, i) => `  <url>\n    <loc>https://jessie5599.github.io/archive/basic-knowledge-${i + 2}.html</loc>\n    <changefreq>weekly</changefreq>\n    <priority>0.7</priority>\n  </url>`),
     ...items.map((it) => `  <url>\n    <loc>https://jessie5599.github.io/archive/${it.day}.html</loc>\n    <changefreq>monthly</changefreq>\n    <priority>0.6</priority>\n  </url>`),
     // 낯선단어 쪼개보기 시리즈 — 이 스크립트가 관리하는 게 아니라 수동으로 만든 페이지지만,
     // sitemap 재생성이 "/archive" 포함 항목을 전부 지우고 다시 쓰기 때문에 여기서 같이 챙겨야 안 없어진다.
