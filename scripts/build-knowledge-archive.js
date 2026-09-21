@@ -364,7 +364,7 @@ ${NAV_SCRIPT}
       name: '낯선단어 쪼개보기',
       desc: '낯선 영단어를 어원(뿌리)으로 쪼개서 뜻을 추론해보는 시리즈예요.',
       href: 'archive/word-breakdown.html',
-      count: '2편',
+      count: '3편',
       ready: true,
     },
     {
@@ -493,6 +493,7 @@ ${NAV_SCRIPT}
     `  <url>\n    <loc>https://jessie5599.github.io/archive/word-breakdown.html</loc>\n    <changefreq>weekly</changefreq>\n    <priority>0.8</priority>\n  </url>`,
     `  <url>\n    <loc>https://jessie5599.github.io/archive/word-breakdown-1.html</loc>\n    <changefreq>monthly</changefreq>\n    <priority>0.6</priority>\n  </url>`,
     `  <url>\n    <loc>https://jessie5599.github.io/archive/word-breakdown-2.html</loc>\n    <changefreq>monthly</changefreq>\n    <priority>0.6</priority>\n  </url>`,
+    `  <url>\n    <loc>https://jessie5599.github.io/archive/word-breakdown-3.html</loc>\n    <changefreq>monthly</changefreq>\n    <priority>0.6</priority>\n  </url>`,
     // 쏙쏙어법 한 조각 시리즈 — 마찬가지로 수동으로 만든 페이지, sitemap 재생성 시 같이 챙겨야 안 없어진다.
     `  <url>\n    <loc>https://jessie5599.github.io/archive/soksok-grammar.html</loc>\n    <changefreq>weekly</changefreq>\n    <priority>0.8</priority>\n  </url>`,
     `  <url>\n    <loc>https://jessie5599.github.io/archive/soksok-grammar-1.html</loc>\n    <changefreq>monthly</changefreq>\n    <priority>0.6</priority>\n  </url>`,
