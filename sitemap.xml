@@ -6,6 +6,11 @@
     <priority>1.0</priority>
   </url>
   <url>
+    <loc>https://jessie5599.github.io/%EC%98%A5%EA%B8%B8%EB%8F%99-%EC%98%81%EC%96%B4%ED%95%99%EC%9B%90-%EC%BB%A4%EB%A6%AC%ED%81%98%EB%9F%BC.html</loc>
+    <changefreq>monthly</changefreq>
+    <priority>0.9</priority>
+  </url>
+  <url>
     <loc>https://jessie5599.github.io/archive.html</loc>
     <changefreq>weekly</changefreq>
     <priority>0.8</priority>
