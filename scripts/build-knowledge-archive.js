@@ -177,12 +177,12 @@ async function main() {
   .wrap{max-width:760px;margin:0 auto;padding:0 24px;}
   header{position:sticky;top:0;z-index:50;background:rgba(247,245,240,0.92);backdrop-filter:blur(6px);border-bottom:1px solid var(--line);}
   .nav{display:flex;align-items:center;justify-content:space-between;padding:16px 24px;max-width:1120px;margin:0 auto;}
-  .brand{font-family:'Gowun Dodum',sans-serif;font-weight:700;font-size:19px;color:var(--navy);}
+  .brand{font-family:'Gowun Dodum',sans-serif;font-weight:700;font-size:21px;color:var(--navy);}
   .brand span{color:var(--teal);}
-  .navlinks{display:flex;gap:24px;font-size:14px;font-weight:500;color:var(--navy);}
+  .navlinks{display:flex;gap:24px;font-size:16px;font-weight:500;color:var(--navy);}
   .navlinks a{padding:6px 0;border-bottom:2px solid transparent;transition:border-color .2s;}
   .navlinks a:hover, .navlinks a.active{border-color:var(--orange);}
-  .nav-cta{background:var(--orange);color:#fff;padding:9px 18px;border-radius:3px;font-size:14px;font-weight:600;white-space:nowrap;}
+  .nav-cta{background:var(--orange);color:#fff;padding:9px 18px;border-radius:3px;font-size:16px;font-weight:600;white-space:nowrap;}
   .nav-right{display:flex;align-items:center;gap:12px;}
   .nav-toggle{display:none;flex-direction:column;justify-content:center;gap:5px;width:32px;height:32px;background:none;border:none;cursor:pointer;padding:0;}
   .nav-toggle span{display:block;width:100%;height:2px;background:var(--navy);border-radius:2px;}
@@ -199,7 +199,7 @@ async function main() {
     .navlinks a:last-child{border-bottom:none;}
   }
   footer{background:var(--navy-deep);color:#B9C2CE;padding:32px 0;}
-  .footer-inner{display:flex;justify-content:space-between;align-items:center;flex-wrap:wrap;gap:10px;font-size:13px;}
+  .footer-inner{display:flex;justify-content:space-between;align-items:center;flex-wrap:wrap;gap:10px;font-size:15px;}
   .footer-inner .brand{color:#B9C2CE;}
   .footer-inner .brand span{color:var(--teal);}
 `;
@@ -256,12 +256,12 @@ ${SITE_HEAD(pageTitle, it.summary.slice(0, 110), canonical)}
 ${SHARED_STYLE}
   .detail-head{padding:32px 0 8px;}
   .detail-head-top{display:flex;align-items:center;justify-content:space-between;gap:12px;margin-bottom:12px;}
-  .k-day{display:inline-block;padding:3px 10px;border-radius:12px;font-size:11.5px;font-weight:700;background:var(--teal-soft);color:var(--teal);}
-  .detail-head h1{font-size:22px;line-height:1.5;font-weight:600;}
+  .k-day{display:inline-block;padding:3px 10px;border-radius:12px;font-size:13.5px;font-weight:700;background:var(--teal-soft);color:var(--teal);}
+  .detail-head h1{font-size:24px;line-height:1.5;font-weight:600;}
   .detail-thumb{width:100%;max-width:420px;aspect-ratio:1/1;object-fit:cover;border-radius:8px;margin:24px auto;box-shadow:0 8px 24px rgba(27,42,65,0.12);background:var(--teal-soft);}
-  .detail-summary{font-size:15.5px;line-height:1.8;color:var(--ink);padding:0 0 32px;}
-  .detail-link{display:inline-block;margin:0 0 64px;font-size:14.5px;font-weight:600;color:#fff;background:var(--teal);padding:11px 20px;border-radius:4px;}
-  .back-link{font-size:13.5px;color:var(--ink-soft);display:inline-block;flex-shrink:0;}
+  .detail-summary{font-size:17.5px;line-height:1.8;color:var(--ink);padding:0 0 32px;}
+  .detail-link{display:inline-block;margin:0 0 64px;font-size:16.5px;font-weight:600;color:#fff;background:var(--teal);padding:11px 20px;border-radius:4px;}
+  .back-link{font-size:15.5px;color:var(--ink-soft);display:inline-block;flex-shrink:0;}
   .back-link-bottom{margin-top:24px;}
 </style>
 </head>
@@ -320,18 +320,18 @@ ${SITE_HEAD(listTitle, listDesc, listCanonical)}
 <style>
 ${SHARED_STYLE}
   .page-head{padding:40px 0 20px;}
-  .page-head .eyebrow{color:var(--teal);font-weight:600;font-size:13px;letter-spacing:.03em;}
-  .page-head h1{font-size:26px;line-height:1.4;font-weight:600;margin-top:8px;}
-  .page-head p{color:var(--ink-soft);font-size:15px;margin-top:10px;}
-  .back-link{font-size:13.5px;color:var(--ink-soft);display:inline-block;}
+  .page-head .eyebrow{color:var(--teal);font-weight:600;font-size:15px;letter-spacing:.03em;}
+  .page-head h1{font-size:28px;line-height:1.4;font-weight:600;margin-top:8px;}
+  .page-head p{color:var(--ink-soft);font-size:17px;margin-top:10px;}
+  .back-link{font-size:15.5px;color:var(--ink-soft);display:inline-block;}
   .k-list{list-style:none;margin:0;padding:0 0 72px;border-top:1px solid var(--line);}
   .k-list li{border-bottom:1px solid var(--line);}
-  .k-list a{display:flex;align-items:center;gap:12px;padding:14px 4px;font-size:14.5px;font-weight:500;color:var(--navy);transition:color .15s;}
+  .k-list a{display:flex;align-items:center;gap:12px;padding:14px 4px;font-size:16.5px;font-weight:500;color:var(--navy);transition:color .15s;}
   .k-list a:hover{color:var(--teal);}
-  .k-list .k-day{flex-shrink:0;display:inline-block;padding:3px 10px;border-radius:12px;font-size:11.5px;font-weight:700;background:var(--teal-soft);color:var(--teal);}
+  .k-list .k-day{flex-shrink:0;display:inline-block;padding:3px 10px;border-radius:12px;font-size:13.5px;font-weight:700;background:var(--teal-soft);color:var(--teal);}
   .k-list .k-label{flex:1;}
   .pager{display:flex;justify-content:center;flex-wrap:wrap;gap:6px;padding:0 0 72px;}
-  .pager a,.pager span{min-width:36px;padding:8px 12px;text-align:center;border:1px solid var(--line);border-radius:6px;font-size:14px;background:var(--paper);color:var(--navy);}
+  .pager a,.pager span{min-width:36px;padding:8px 12px;text-align:center;border:1px solid var(--line);border-radius:6px;font-size:16px;background:var(--paper);color:var(--navy);}
   .pager a:hover{border-color:var(--teal);color:var(--teal);}
   .pager .cur{background:var(--teal);border-color:var(--teal);color:#fff;font-weight:700;}
 </style>
@@ -371,21 +371,21 @@ ${NAV_SCRIPT}
       name: '낯선단어 쪼개보기',
       desc: '낯선 영단어를 어원(뿌리)으로 쪼개서 뜻을 추론해보는 시리즈예요.',
       href: 'archive/word-breakdown.html',
-      count: '3편',
+      count: '4편',
       ready: true,
     },
     {
       name: '쏙쏙어법 한 조각',
       desc: '중등부터 수능까지 이어지는 어법 포인트를 하나씩 짚어보는 시리즈예요.',
       href: 'archive/soksok-grammar.html',
-      count: '3편',
+      count: '4편',
       ready: true,
     },
     {
       name: '거친구문 길들이기',
       desc: '도치·생략처럼 날뛰는 구문을 붙잡아 뜯어서 설명하는 시리즈예요.',
       href: 'archive/rough-syntax.html',
-      count: '2편',
+      count: '3편',
       ready: true,
     },
   ];
@@ -423,9 +423,9 @@ ${NAV_SCRIPT}
 <style>
 ${SHARED_STYLE.replace(/\.\.\//g, '')}
   .page-head{padding:48px 0 24px;}
-  .page-head .eyebrow{color:var(--teal);font-weight:600;font-size:13px;letter-spacing:.03em;}
-  .page-head h1{font-size:28px;line-height:1.4;font-weight:600;margin-top:8px;}
-  .page-head p{color:var(--ink-soft);font-size:15px;margin-top:10px;}
+  .page-head .eyebrow{color:var(--teal);font-weight:600;font-size:15px;letter-spacing:.03em;}
+  .page-head h1{font-size:30px;line-height:1.4;font-weight:600;margin-top:8px;}
+  .page-head p{color:var(--ink-soft);font-size:17px;margin-top:10px;}
   .hub-grid{display:grid;grid-template-columns:repeat(2,1fr);gap:18px;padding:8px 0 72px;}
   @media(max-width:640px){ .hub-grid{grid-template-columns:1fr;} }
   .hub-card{
@@ -435,10 +435,10 @@ ${SHARED_STYLE.replace(/\.\.\//g, '')}
   a.hub-card:hover{box-shadow:0 10px 24px rgba(27,42,65,0.09);transform:translateY(-2px);}
   .hub-card-disabled{opacity:.6;}
   .hub-card-top{display:flex;align-items:center;justify-content:space-between;gap:10px;margin-bottom:8px;}
-  .hub-card h3{font-size:17px;font-weight:600;}
-  .hub-count{flex-shrink:0;font-size:11.5px;font-weight:700;padding:3px 10px;border-radius:12px;background:var(--teal-soft);color:var(--teal);}
+  .hub-card h3{font-size:19px;font-weight:600;}
+  .hub-count{flex-shrink:0;font-size:13.5px;font-weight:700;padding:3px 10px;border-radius:12px;background:var(--teal-soft);color:var(--teal);}
   .hub-count-soon{background:var(--line);color:var(--ink-soft);}
-  .hub-desc{font-size:13.5px;color:var(--ink-soft);line-height:1.6;margin:0;}
+  .hub-desc{font-size:15.5px;color:var(--ink-soft);line-height:1.6;margin:0;}
 </style>
 </head>
 <body>
@@ -501,15 +501,18 @@ ${NAV_SCRIPT}
     `  <url>\n    <loc>https://jessie5599.github.io/archive/word-breakdown-1.html</loc>\n    <changefreq>monthly</changefreq>\n    <priority>0.6</priority>\n  </url>`,
     `  <url>\n    <loc>https://jessie5599.github.io/archive/word-breakdown-2.html</loc>\n    <changefreq>monthly</changefreq>\n    <priority>0.6</priority>\n  </url>`,
     `  <url>\n    <loc>https://jessie5599.github.io/archive/word-breakdown-3.html</loc>\n    <changefreq>monthly</changefreq>\n    <priority>0.6</priority>\n  </url>`,
+    `  <url>\n    <loc>https://jessie5599.github.io/archive/word-breakdown-4.html</loc>\n    <changefreq>monthly</changefreq>\n    <priority>0.6</priority>\n  </url>`,
     // 쏙쏙어법 한 조각 시리즈 — 마찬가지로 수동으로 만든 페이지, sitemap 재생성 시 같이 챙겨야 안 없어진다.
     `  <url>\n    <loc>https://jessie5599.github.io/archive/soksok-grammar.html</loc>\n    <changefreq>weekly</changefreq>\n    <priority>0.8</priority>\n  </url>`,
     `  <url>\n    <loc>https://jessie5599.github.io/archive/soksok-grammar-1.html</loc>\n    <changefreq>monthly</changefreq>\n    <priority>0.6</priority>\n  </url>`,
     `  <url>\n    <loc>https://jessie5599.github.io/archive/soksok-grammar-2.html</loc>\n    <changefreq>monthly</changefreq>\n    <priority>0.6</priority>\n  </url>`,
     `  <url>\n    <loc>https://jessie5599.github.io/archive/soksok-grammar-3.html</loc>\n    <changefreq>monthly</changefreq>\n    <priority>0.6</priority>\n  </url>`,
+    `  <url>\n    <loc>https://jessie5599.github.io/archive/soksok-grammar-4.html</loc>\n    <changefreq>monthly</changefreq>\n    <priority>0.6</priority>\n  </url>`,
     // 거친구문 길들이기 시리즈 — 마찬가지로 수동으로 만든 페이지, sitemap 재생성 시 같이 챙겨야 안 없어진다.
     `  <url>\n    <loc>https://jessie5599.github.io/archive/rough-syntax.html</loc>\n    <changefreq>weekly</changefreq>\n    <priority>0.8</priority>\n  </url>`,
     `  <url>\n    <loc>https://jessie5599.github.io/archive/rough-syntax-1.html</loc>\n    <changefreq>monthly</changefreq>\n    <priority>0.6</priority>\n  </url>`,
     `  <url>\n    <loc>https://jessie5599.github.io/archive/rough-syntax-2.html</loc>\n    <changefreq>monthly</changefreq>\n    <priority>0.6</priority>\n  </url>`,
+    `  <url>\n    <loc>https://jessie5599.github.io/archive/rough-syntax-3.html</loc>\n    <changefreq>monthly</changefreq>\n    <priority>0.6</priority>\n  </url>`,
   ];
   const sitemap = `<?xml version="1.0" encoding="UTF-8"?>\n<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">\n${nonArchiveUrls.join('\n')}\n${archiveUrls.join('\n')}\n</urlset>\n`;
   fs.writeFileSync(sitemapPath, sitemap, 'utf8');
