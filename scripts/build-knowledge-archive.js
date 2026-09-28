@@ -68,7 +68,9 @@ async function main() {
     return {
       category: getTag(block, 'category').replace(/^[■□●]\s*/, ''),
       title: cleanTitle(getTag(block, 'title')),
-      link: getTag(block, 'link'),
+      // PC 버전(blog.naver.com)은 네이버가 항상 noindex를 걸어두고, 모바일 버전(m.blog.naver.com)만 index로 열어둔다.
+      // 우리 아카이브가 PC 링크를 그대로 걸어두면 구글이 그 링크를 따라가서 noindex를 보고 색인에서 빼버린다.
+      link: getTag(block, 'link').replace('https://blog.naver.com/', 'https://m.blog.naver.com/'),
       pubDate: getTag(block, 'pubDate'),
       thumbnail: extractThumbnail(description),
     };
@@ -79,6 +81,8 @@ async function main() {
   // 그래서 이미 만든 회차는 scripts/archive-items.json에 저장해 두고(번호 고정), RSS에서 새로 나온 글만 뒤에 이어 붙인다.
   const CACHE_PATH = path.join(__dirname, 'archive-items.json');
   const cache = fs.existsSync(CACHE_PATH) ? JSON.parse(fs.readFileSync(CACHE_PATH, 'utf8')) : [];
+  // 예전에 캐시에 저장된 PC 링크도 모바일 링크로 바로잡는다(2026-09-28, noindex 문제 발견).
+  cache.forEach((c) => { c.link = String(c.link).replace('https://blog.naver.com/', 'https://m.blog.naver.com/'); });
   const keyOf = (l) => String(l).split('?')[0];
   const knownKeys = new Set(cache.map((c) => keyOf(c.link)));
   const fresh = items.filter((it) => !knownKeys.has(keyOf(it.link)));
