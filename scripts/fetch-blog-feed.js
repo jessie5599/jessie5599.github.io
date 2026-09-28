@@ -43,7 +43,8 @@ async function main() {
   const items = itemBlocks.map((block) => ({
     category: getTag(block, 'category').replace(/^[■□●]\s*/, ''),
     title: getTag(block, 'title'),
-    link: getTag(block, 'link'),
+    // PC 버전(blog.naver.com)은 네이버가 noindex를 걸어두고 모바일(m.blog.naver.com)만 index라서, 링크는 항상 모바일로 바꿔 건다.
+    link: getTag(block, 'link').replace('https://blog.naver.com/', 'https://m.blog.naver.com/'),
     pubDate: getTag(block, 'pubDate'),
     thumbnail: extractThumbnail(getTag(block, 'description')),
   }));
