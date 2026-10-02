@@ -15,6 +15,7 @@ const OUT_DIR = path.join(SITE_ROOT, 'archive');
 // 대표성휴리스틱결합오류: 아직 릴스 내레이션이 없어 원고의 한 줄 정리만 쓰면 다른 회차보다
 // 눈에 띄게 짧아짐. 원고의 hook/concepts 절을 바탕으로 같은 톤으로 다시 써서 보강.
 const SUMMARY_OVERRIDES = {
+  '증여론': "오늘은 마르셀 모스의 '증여론'을 알아볼게요. 남태평양 트로브리안드 제도의 '쿨라' 교환에서는 선물이 자발적인 것처럼 건네지지만, 정해진 방향과 시간 안에 반드시 답례되어야 해요. 모스는 주어야 할 의무, 받아야 할 의무, 답례해야 할 의무가 맞물려서 선물에 사회적 강제력이 생긴다고 봤어요. 그래서 증여를 경제 행위 하나가 아니라 종교·법·도덕·위신이 함께 얽힌 '총체적 사회적 사실'이라고 불렀어요. 순수한 선물이라는 우리의 상식을 되묻게 하는 이론이에요.",
   '대표성휴리스틱결합오류': "오늘은 '대표성 휴리스틱과 결합 오류'를 알아볼게요. '린다는 31세이고 독신이며 사회 정의에 관심이 많다'는 설명을 들으면, 사람들은 린다가 그냥 은행원이기보다 '은행원이면서 페미니스트'일 가능성이 더 높다고 답해요. 그런데 이건 명백한 오류예요. 은행원이면서 페미니스트인 사람은 은행원 전체의 일부일 뿐이라, 그 확률이 은행원일 확률을 넘어설 수 없거든요. 심리학자 카너먼과 트버스키는 이야기가 구체적이고 그럴듯하게 느껴질수록, 사람들이 실제 확률 법칙을 무시하고 판단한다는 걸 밝혀냈어요. 이야기가 정교해질수록 설득력은 커지지만, 그게 확률적으로 맞다는 뜻은 아니라는 거예요.",
   // 2026-09-24: 이중코딩부터 공개키암호까지 4개 회차는 릴스 내레이션이 아직 없어 findDraftSummary()의
   // 한 줄 인용문만 쓰이면서 다른 회차보다 눈에 띄게 짧았음(길이 44~55자 vs 다른 회차 160~325자).
@@ -383,14 +384,14 @@ ${NAV_SCRIPT}
       name: '낯선단어 쪼개보기',
       desc: '낯선 영단어를 어원(뿌리)으로 쪼개서 뜻을 추론해보는 시리즈예요.',
       href: 'archive/word-breakdown.html',
-      count: '5편',
+      count: '6편',
       ready: true,
     },
     {
       name: '쏙쏙어법 한 조각',
       desc: '중등부터 수능까지 이어지는 어법 포인트를 하나씩 짚어보는 시리즈예요.',
       href: 'archive/soksok-grammar.html',
-      count: '5편',
+      count: '6편',
       ready: true,
     },
     {
@@ -515,6 +516,11 @@ ${NAV_SCRIPT}
     `  <url>\n    <loc>https://jessie5599.github.io/archive/word-breakdown-3.html</loc>\n    <changefreq>monthly</changefreq>\n    <priority>0.6</priority>\n  </url>`,
     `  <url>\n    <loc>https://jessie5599.github.io/archive/word-breakdown-4.html</loc>\n    <changefreq>monthly</changefreq>\n    <priority>0.6</priority>\n  </url>`,
     `  <url>\n    <loc>https://jessie5599.github.io/archive/word-breakdown-5.html</loc>\n    <changefreq>monthly</changefreq>\n    <priority>0.6</priority>\n  </url>`,
+    `  <url>
+    <loc>https://jessie5599.github.io/archive/word-breakdown-6.html</loc>
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>`,
     // 쏙쏙어법 한 조각 시리즈 — 마찬가지로 수동으로 만든 페이지, sitemap 재생성 시 같이 챙겨야 안 없어진다.
     `  <url>\n    <loc>https://jessie5599.github.io/archive/soksok-grammar.html</loc>\n    <changefreq>weekly</changefreq>\n    <priority>0.8</priority>\n  </url>`,
     `  <url>\n    <loc>https://jessie5599.github.io/archive/soksok-grammar-1.html</loc>\n    <changefreq>monthly</changefreq>\n    <priority>0.6</priority>\n  </url>`,
@@ -522,6 +528,11 @@ ${NAV_SCRIPT}
     `  <url>\n    <loc>https://jessie5599.github.io/archive/soksok-grammar-3.html</loc>\n    <changefreq>monthly</changefreq>\n    <priority>0.6</priority>\n  </url>`,
     `  <url>\n    <loc>https://jessie5599.github.io/archive/soksok-grammar-4.html</loc>\n    <changefreq>monthly</changefreq>\n    <priority>0.6</priority>\n  </url>`,
     `  <url>\n    <loc>https://jessie5599.github.io/archive/soksok-grammar-5.html</loc>\n    <changefreq>monthly</changefreq>\n    <priority>0.6</priority>\n  </url>`,
+    `  <url>
+    <loc>https://jessie5599.github.io/archive/soksok-grammar-6.html</loc>
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>`,
     // 거친구문 길들이기 시리즈 — 마찬가지로 수동으로 만든 페이지, sitemap 재생성 시 같이 챙겨야 안 없어진다.
     `  <url>\n    <loc>https://jessie5599.github.io/archive/rough-syntax.html</loc>\n    <changefreq>weekly</changefreq>\n    <priority>0.8</priority>\n  </url>`,
     `  <url>\n    <loc>https://jessie5599.github.io/archive/rough-syntax-1.html</loc>\n    <changefreq>monthly</changefreq>\n    <priority>0.6</priority>\n  </url>`,
