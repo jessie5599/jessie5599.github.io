@@ -398,7 +398,7 @@ ${NAV_SCRIPT}
       name: '거친구문 길들이기',
       desc: '도치·생략처럼 날뛰는 구문을 붙잡아 뜯어서 설명하는 시리즈예요.',
       href: 'archive/rough-syntax.html',
-      count: '5편',
+      count: '6편',
       ready: true,
     },
   ];
@@ -540,6 +540,11 @@ ${NAV_SCRIPT}
     `  <url>\n    <loc>https://jessie5599.github.io/archive/rough-syntax-3.html</loc>\n    <changefreq>monthly</changefreq>\n    <priority>0.6</priority>\n  </url>`,
     `  <url>\n    <loc>https://jessie5599.github.io/archive/rough-syntax-4.html</loc>\n    <changefreq>monthly</changefreq>\n    <priority>0.6</priority>\n  </url>`,
     `  <url>\n    <loc>https://jessie5599.github.io/archive/rough-syntax-5.html</loc>\n    <changefreq>monthly</changefreq>\n    <priority>0.6</priority>\n  </url>`,
+    `  <url>
+    <loc>https://jessie5599.github.io/archive/rough-syntax-6.html</loc>
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>`,
   ];
   const sitemap = `<?xml version="1.0" encoding="UTF-8"?>\n<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">\n${nonArchiveUrls.join('\n')}\n${archiveUrls.join('\n')}\n</urlset>\n`;
   fs.writeFileSync(sitemapPath, sitemap, 'utf8');
