@@ -32,6 +32,9 @@ const SUMMARY_OVERRIDES = {
   // 2026-09-30: 라반동작분석도 릴스 내레이션이 없어 findDraftSummary()의 한 줄 인용문만 쓰이면서
   // 다른 회차보다 짧았음(67자). 같은 방식으로 hook/concepts 절을 바탕으로 보강.
   '라반동작분석': "오늘은 '라반 동작 분석'을 알아볼게요. 음악은 오선지에 남아 그대로 재현되지만, 무용은 오랫동안 '악보 없는 예술'이라 무대를 내려오는 순간 사라져버렸어요. 무용이론가 루돌프 폰 라반은 몸짓을 음악처럼 기록할 수 있는 기호 체계를 고민했고, 몸·에너지·형태·공간 네 요소로 움직임을 분해해 '라바노테이션'이라는 무보로 남기는 라반 동작 분석을 만들었어요. 다만 이 체계가 움직임의 구조는 보존해도, 그 순간의 고유한 표현성과 생동감까지 완전히 담아내지는 못한다는 근본적 딜레마도 함께 지적돼요.",
+  // 2026-10-05: 미메시스도 릴스 내레이션이 없어 findDraftSummary()의 한 줄 인용문만 쓰이며 짧아졌음.
+  // 같은 방식으로 hook/concepts 절을 바탕으로 보강.
+  '미메시스': "오늘은 '미메시스'를 알아볼게요. 플라톤은 화가가 그린 침대를 이데아를 베낀 현실을 다시 베낀 '그림자의 그림자'라 부르며 예술을 진리에서 멀어진 흉내내기로 깎아내렸어요. 반면 제자 아리스토텔레스는 예술의 모방이야말로 인간의 본성이며, 실제로 일어난 사실이 아니라 일어날 법한 보편적 진실을 다룬다는 점에서 오히려 역사보다 더 철학적이라고 반박했어요. 비극을 보며 연민과 공포를 느끼고 해소하는 카타르시스를 예술의 기능으로 제시했고, 이후 사진과 영화의 등장으로 재현 개념이 흔들리면서 보드리야르는 원본 없이 이미지가 이미지를 복제하는 '시뮬라크르' 단계까지 논의를 확장했어요.",
 };
 
 function decodeEntities(str) {
@@ -384,7 +387,7 @@ ${NAV_SCRIPT}
       name: '낯선단어 쪼개보기',
       desc: '낯선 영단어를 어원(뿌리)으로 쪼개서 뜻을 추론해보는 시리즈예요.',
       href: 'archive/word-breakdown.html',
-      count: '6편',
+      count: '7편',
       ready: true,
     },
     {
@@ -518,6 +521,11 @@ ${NAV_SCRIPT}
     `  <url>\n    <loc>https://jessie5599.github.io/archive/word-breakdown-5.html</loc>\n    <changefreq>monthly</changefreq>\n    <priority>0.6</priority>\n  </url>`,
     `  <url>
     <loc>https://jessie5599.github.io/archive/word-breakdown-6.html</loc>
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>`,
+    `  <url>
+    <loc>https://jessie5599.github.io/archive/word-breakdown-7.html</loc>
     <changefreq>monthly</changefreq>
     <priority>0.6</priority>
   </url>`,

@@ -196,6 +196,11 @@
     <priority>0.6</priority>
   </url>
   <url>
+    <loc>https://jessie5599.github.io/archive/34.html</loc>
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  <url>
     <loc>https://jessie5599.github.io/archive/word-breakdown.html</loc>
     <changefreq>weekly</changefreq>
     <priority>0.8</priority>
@@ -227,6 +232,11 @@
   </url>
   <url>
     <loc>https://jessie5599.github.io/archive/word-breakdown-6.html</loc>
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  <url>
+    <loc>https://jessie5599.github.io/archive/word-breakdown-7.html</loc>
     <changefreq>monthly</changefreq>
     <priority>0.6</priority>
   </url>
