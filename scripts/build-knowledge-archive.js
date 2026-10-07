@@ -35,6 +35,9 @@ const SUMMARY_OVERRIDES = {
   // 2026-10-05: 미메시스도 릴스 내레이션이 없어 findDraftSummary()의 한 줄 인용문만 쓰이며 짧아졌음.
   // 같은 방식으로 hook/concepts 절을 바탕으로 보강.
   '미메시스': "오늘은 '미메시스'를 알아볼게요. 플라톤은 화가가 그린 침대를 이데아를 베낀 현실을 다시 베낀 '그림자의 그림자'라 부르며 예술을 진리에서 멀어진 흉내내기로 깎아내렸어요. 반면 제자 아리스토텔레스는 예술의 모방이야말로 인간의 본성이며, 실제로 일어난 사실이 아니라 일어날 법한 보편적 진실을 다룬다는 점에서 오히려 역사보다 더 철학적이라고 반박했어요. 비극을 보며 연민과 공포를 느끼고 해소하는 카타르시스를 예술의 기능으로 제시했고, 이후 사진과 영화의 등장으로 재현 개념이 흔들리면서 보드리야르는 원본 없이 이미지가 이미지를 복제하는 '시뮬라크르' 단계까지 논의를 확장했어요.",
+  // 2026-10-07: 자유의지와결정론도 릴스 내레이션이 없어 findDraftSummary()의 한 줄 인용문만 쓰이며 짧아졌음.
+  // 같은 방식으로 hook/concepts 절을 바탕으로 보강.
+  '자유의지와결정론': "오늘은 '자유의지와 결정론'을 알아볼게요. 수학자 라플라스는 우주의 모든 입자 정보를 아는 존재라면 미래까지 정확히 계산할 수 있다고 상상했는데, 이게 참이라면 내 선택도 이미 정해진 결과일 뿐이라는 거예요. 신경과학자 벤저민 리벳의 실험에서는 뇌의 준비전위가 의식적 결심보다 약 0.3초 먼저 나타나, 결심이 행동의 원인이 아니라 뒤늦게 따라붙는 착각일 수 있다는 해석을 낳았어요. 강한 결정론은 여기서 자유의지를 환상으로 보지만, 철학자 해리 프랑크푸르트의 양립가능론은 자유의 핵심이 인과 사슬에서 벗어나는 데 있는 게 아니라 자신의 욕구를 스스로 성찰하고 승인하는 능력에 있다고 봐요.",
 };
 
 function decodeEntities(str) {
@@ -394,14 +397,14 @@ ${NAV_SCRIPT}
       name: '쏙쏙어법 한 조각',
       desc: '중등부터 수능까지 이어지는 어법 포인트를 하나씩 짚어보는 시리즈예요.',
       href: 'archive/soksok-grammar.html',
-      count: '6편',
+      count: '7편',
       ready: true,
     },
     {
       name: '거친구문 길들이기',
       desc: '도치·생략처럼 날뛰는 구문을 붙잡아 뜯어서 설명하는 시리즈예요.',
       href: 'archive/rough-syntax.html',
-      count: '6편',
+      count: '7편',
       ready: true,
     },
   ];
@@ -541,6 +544,11 @@ ${NAV_SCRIPT}
     <changefreq>monthly</changefreq>
     <priority>0.6</priority>
   </url>`,
+    `  <url>
+    <loc>https://jessie5599.github.io/archive/soksok-grammar-7.html</loc>
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>`,
     // 거친구문 길들이기 시리즈 — 마찬가지로 수동으로 만든 페이지, sitemap 재생성 시 같이 챙겨야 안 없어진다.
     `  <url>\n    <loc>https://jessie5599.github.io/archive/rough-syntax.html</loc>\n    <changefreq>weekly</changefreq>\n    <priority>0.8</priority>\n  </url>`,
     `  <url>\n    <loc>https://jessie5599.github.io/archive/rough-syntax-1.html</loc>\n    <changefreq>monthly</changefreq>\n    <priority>0.6</priority>\n  </url>`,
@@ -550,6 +558,11 @@ ${NAV_SCRIPT}
     `  <url>\n    <loc>https://jessie5599.github.io/archive/rough-syntax-5.html</loc>\n    <changefreq>monthly</changefreq>\n    <priority>0.6</priority>\n  </url>`,
     `  <url>
     <loc>https://jessie5599.github.io/archive/rough-syntax-6.html</loc>
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>`,
+    `  <url>
+    <loc>https://jessie5599.github.io/archive/rough-syntax-7.html</loc>
     <changefreq>monthly</changefreq>
     <priority>0.6</priority>
   </url>`,
