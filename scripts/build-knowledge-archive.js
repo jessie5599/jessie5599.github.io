@@ -38,6 +38,9 @@ const SUMMARY_OVERRIDES = {
   // 2026-10-07: 자유의지와결정론도 릴스 내레이션이 없어 findDraftSummary()의 한 줄 인용문만 쓰이며 짧아졌음.
   // 같은 방식으로 hook/concepts 절을 바탕으로 보강.
   '자유의지와결정론': "오늘은 '자유의지와 결정론'을 알아볼게요. 수학자 라플라스는 우주의 모든 입자 정보를 아는 존재라면 미래까지 정확히 계산할 수 있다고 상상했는데, 이게 참이라면 내 선택도 이미 정해진 결과일 뿐이라는 거예요. 신경과학자 벤저민 리벳의 실험에서는 뇌의 준비전위가 의식적 결심보다 약 0.3초 먼저 나타나, 결심이 행동의 원인이 아니라 뒤늦게 따라붙는 착각일 수 있다는 해석을 낳았어요. 강한 결정론은 여기서 자유의지를 환상으로 보지만, 철학자 해리 프랑크푸르트의 양립가능론은 자유의 핵심이 인과 사슬에서 벗어나는 데 있는 게 아니라 자신의 욕구를 스스로 성찰하고 승인하는 능력에 있다고 봐요.",
+  // 2026-10-09: 지진파와지구내부구조도 릴스 내레이션이 없어 findDraftSummary()의 한 줄 인용문만 쓰이며 짧아졌음.
+  // 같은 방식으로 hook/concepts 절을 바탕으로 보강.
+  '지진파와지구내부구조': "오늘은 '지진파와 지구 내부 구조'를 알아볼게요. 인류가 파 본 가장 깊은 구멍은 약 12km인데 지구 반지름은 약 6,400km라서, 직접 들여다본 적 없는 땅속을 지진파 분석으로 알아냈어요. 고체·액체·기체를 모두 통과하는 P파와 고체만 통과하는 S파는 지각과 맨틀, 외핵, 내핵 사이의 불연속면을 지날 때 속도가 꺾이거나 굴절돼요. 전 세계 관측소 자료를 모아보니 진앙에서 103도 이상 떨어진 곳에서는 S파가 전혀 관측되지 않는 그림자대가 나타났는데, 액체를 통과 못 하는 S파의 이 부재가 오히려 지구 외핵이 액체라는 결정적 증거가 됐어요. 이후 P파의 굴절 양상까지 더해 내핵은 다시 고체라는 사실도 밝혀냈어요.",
 };
 
 function decodeEntities(str) {
@@ -390,14 +393,14 @@ ${NAV_SCRIPT}
       name: '낯선단어 쪼개보기',
       desc: '낯선 영단어를 어원(뿌리)으로 쪼개서 뜻을 추론해보는 시리즈예요.',
       href: 'archive/word-breakdown.html',
-      count: '7편',
+      count: '8편',
       ready: true,
     },
     {
       name: '쏙쏙어법 한 조각',
       desc: '중등부터 수능까지 이어지는 어법 포인트를 하나씩 짚어보는 시리즈예요.',
       href: 'archive/soksok-grammar.html',
-      count: '7편',
+      count: '8편',
       ready: true,
     },
     {
@@ -532,6 +535,11 @@ ${NAV_SCRIPT}
     <changefreq>monthly</changefreq>
     <priority>0.6</priority>
   </url>`,
+    `  <url>
+    <loc>https://jessie5599.github.io/archive/word-breakdown-8.html</loc>
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>`,
     // 쏙쏙어법 한 조각 시리즈 — 마찬가지로 수동으로 만든 페이지, sitemap 재생성 시 같이 챙겨야 안 없어진다.
     `  <url>\n    <loc>https://jessie5599.github.io/archive/soksok-grammar.html</loc>\n    <changefreq>weekly</changefreq>\n    <priority>0.8</priority>\n  </url>`,
     `  <url>\n    <loc>https://jessie5599.github.io/archive/soksok-grammar-1.html</loc>\n    <changefreq>monthly</changefreq>\n    <priority>0.6</priority>\n  </url>`,
@@ -546,6 +554,11 @@ ${NAV_SCRIPT}
   </url>`,
     `  <url>
     <loc>https://jessie5599.github.io/archive/soksok-grammar-7.html</loc>
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>`,
+    `  <url>
+    <loc>https://jessie5599.github.io/archive/soksok-grammar-8.html</loc>
     <changefreq>monthly</changefreq>
     <priority>0.6</priority>
   </url>`,
