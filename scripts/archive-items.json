@@ -250,5 +250,12 @@
   "thumbnail": "https://blogthumb.pstatic.net/MjAyNjA5MjFfMjg0/MDAxNzg5OTcxMzIzMDQ5.oNYnbLKsO2Rp2rpXORRhS6-bvL3GihD6g_T17QgFNCMg.n1wt9lhrx6Py1YaTgb4saGqkoTUg3egujmR268RpDigg.PNG/01-cover.png?type=s3",
   "summary": "오늘은 '지진파와 지구 내부 구조'를 알아볼게요. 인류가 파 본 가장 깊은 구멍은 약 12km인데 지구 반지름은 약 6,400km라서, 직접 들여다본 적 없는 땅속을 지진파 분석으로 알아냈어요. 고체·액체·기체를 모두 통과하는 P파와 고체만 통과하는 S파는 지각과 맨틀, 외핵, 내핵 사이의 불연속면을 지날 때 속도가 꺾이거나 굴절돼요. 전 세계 관측소 자료를 모아보니 진앙에서 103도 이상 떨어진 곳에서는 S파가 전혀 관측되지 않는 그림자대가 나타났는데, 액체를 통과 못 하는 S파의 이 부재가 오히려 지구 외핵이 액체라는 결정적 증거가 됐어요. 이후 P파의 굴절 양상까지 더해 내핵은 다시 고체라는 사실도 밝혀냈어요.",
   "link": "https://m.blog.naver.com/jessie5599/224418761660?fromRss=true&trackingCode=rss"
+ },
+ {
+  "day": 37,
+  "displayTitle": "민감도특이도",
+  "thumbnail": "https://blogthumb.pstatic.net/MjAyNjA5MThfMzAg/MDAxNzg5NzMwOTE5Mzg5.SOatnJ5ZfnNUjDajgOPrBYjzJO8J0zW-mGWqeiN_Mckg.RQoTnPEX5fymjE8X3ltXK5DZwXuumbkIPxQDYqHj2e4g.PNG/title.png?type=s3",
+  "summary": "오늘은 '민감도와 특이도'를 알아볼게요. 어떤 희귀병 검사의 정확도가 99%라도, 양성 판정을 받았다고 바로 '거의 확실히 걸렸다'고 볼 수는 없어요. 민감도는 실제 환자를 양성으로 정확히 잡아내는 비율, 특이도는 건강한 사람을 음성으로 정확히 판정하는 비율인데, 아무리 정교한 검사도 위양성·위음성이라는 오류를 완전히 없애지는 못해요. 핵심은 유병률이에요. 어떤 병의 유병률이 0.1%라면 만 명 중 환자는 열 명뿐인데, 특이도 99%의 검사조차 나머지 9,990명 중 약 백 명을 잘못 양성으로 판정해서, 양성 판정자 중 실제 환자 비율인 양성예측도는 10%도 안 될 수 있어요.",
+  "link": "https://m.blog.naver.com/jessie5599/224416415561?fromRss=true&trackingCode=rss"
  }
 ]
