@@ -44,6 +44,9 @@ const SUMMARY_OVERRIDES = {
   // 2026-10-11: 민감도특이도도 릴스 내레이션이 없어 findDraftSummary()의 한 줄 인용문만 쓰이며 짧아졌음.
   // 같은 방식으로 hook/concepts 절을 바탕으로 보강.
   '민감도특이도': "오늘은 '민감도와 특이도'를 알아볼게요. 어떤 희귀병 검사의 정확도가 99%라도, 양성 판정을 받았다고 바로 '거의 확실히 걸렸다'고 볼 수는 없어요. 민감도는 실제 환자를 양성으로 정확히 잡아내는 비율, 특이도는 건강한 사람을 음성으로 정확히 판정하는 비율인데, 아무리 정교한 검사도 위양성·위음성이라는 오류를 완전히 없애지는 못해요. 핵심은 유병률이에요. 어떤 병의 유병률이 0.1%라면 만 명 중 환자는 열 명뿐인데, 특이도 99%의 검사조차 나머지 9,990명 중 약 백 명을 잘못 양성으로 판정해서, 양성 판정자 중 실제 환자 비율인 양성예측도는 10%도 안 될 수 있어요.",
+  // 2026-10-13: 몽타주도 릴스 내레이션이 없어 findDraftSummary()의 한 줄 인용문만 쓰이며 짧아졌음.
+  // 같은 방식으로 hook/concepts 절을 바탕으로 보강.
+  '몽타주': "오늘은 '몽타주'를 알아볼게요. 소련의 영화감독 레프 쿨레쇼프는 배우의 무표정한 얼굴에 수프 그릇, 관, 노는 아이의 장면을 각각 이어 붙였는데, 같은 얼굴에서 관객은 배고픔, 슬픔, 다정함을 서로 다르게 읽어냈어요. 이 쿨레쇼프 효과는 영화적 의미가 한 장면이 아니라 장면과 장면의 결합에서 생긴다는 걸 보여줘요. 세르게이 예이젠시테인은 이질적인 쇼트를 의도적으로 충돌시켜 제3의 의미를 만드는 변증법적 몽타주로 이 원리를 체계화했어요. 반면 앙드레 바쟁은 몽타주가 현실을 감독 의도대로 재단한다고 비판하며, 미장센과 롱테이크로 현실의 모호함을 그대로 존중해야 한다고 맞섰어요.",
 };
 
 function decodeEntities(str) {
@@ -396,14 +399,14 @@ ${NAV_SCRIPT}
       name: '낯선단어 쪼개보기',
       desc: '낯선 영단어를 어원(뿌리)으로 쪼개서 뜻을 추론해보는 시리즈예요.',
       href: 'archive/word-breakdown.html',
-      count: '8편',
+      count: '9편',
       ready: true,
     },
     {
       name: '쏙쏙어법 한 조각',
       desc: '중등부터 수능까지 이어지는 어법 포인트를 하나씩 짚어보는 시리즈예요.',
       href: 'archive/soksok-grammar.html',
-      count: '8편',
+      count: '9편',
       ready: true,
     },
     {
@@ -543,6 +546,11 @@ ${NAV_SCRIPT}
     <changefreq>monthly</changefreq>
     <priority>0.6</priority>
   </url>`,
+    `  <url>
+    <loc>https://jessie5599.github.io/archive/word-breakdown-9.html</loc>
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>`,
     // 쏙쏙어법 한 조각 시리즈 — 마찬가지로 수동으로 만든 페이지, sitemap 재생성 시 같이 챙겨야 안 없어진다.
     `  <url>\n    <loc>https://jessie5599.github.io/archive/soksok-grammar.html</loc>\n    <changefreq>weekly</changefreq>\n    <priority>0.8</priority>\n  </url>`,
     `  <url>\n    <loc>https://jessie5599.github.io/archive/soksok-grammar-1.html</loc>\n    <changefreq>monthly</changefreq>\n    <priority>0.6</priority>\n  </url>`,
@@ -562,6 +570,11 @@ ${NAV_SCRIPT}
   </url>`,
     `  <url>
     <loc>https://jessie5599.github.io/archive/soksok-grammar-8.html</loc>
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>`,
+    `  <url>
+    <loc>https://jessie5599.github.io/archive/soksok-grammar-9.html</loc>
     <changefreq>monthly</changefreq>
     <priority>0.6</priority>
   </url>`,
