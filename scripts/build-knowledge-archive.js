@@ -47,6 +47,9 @@ const SUMMARY_OVERRIDES = {
   // 2026-10-13: 몽타주도 릴스 내레이션이 없어 findDraftSummary()의 한 줄 인용문만 쓰이며 짧아졌음.
   // 같은 방식으로 hook/concepts 절을 바탕으로 보강.
   '몽타주': "오늘은 '몽타주'를 알아볼게요. 소련의 영화감독 레프 쿨레쇼프는 배우의 무표정한 얼굴에 수프 그릇, 관, 노는 아이의 장면을 각각 이어 붙였는데, 같은 얼굴에서 관객은 배고픔, 슬픔, 다정함을 서로 다르게 읽어냈어요. 이 쿨레쇼프 효과는 영화적 의미가 한 장면이 아니라 장면과 장면의 결합에서 생긴다는 걸 보여줘요. 세르게이 예이젠시테인은 이질적인 쇼트를 의도적으로 충돌시켜 제3의 의미를 만드는 변증법적 몽타주로 이 원리를 체계화했어요. 반면 앙드레 바쟁은 몽타주가 현실을 감독 의도대로 재단한다고 비판하며, 미장센과 롱테이크로 현실의 모호함을 그대로 존중해야 한다고 맞섰어요.",
+  // 2026-10-15: 코즈의정리도 릴스 내레이션이 없어 findDraftSummary()의 한 줄 인용문만 쓰이며 짧아졌음.
+  // 같은 방식으로 hook/concepts 절을 바탕으로 보강.
+  '코즈의정리': "오늘은 '코즈의 정리'를 알아볼게요. 목장주의 소가 옆 농지의 곡식을 짓밟는다면, 전통적인 경제학은 정부가 세금이나 규제로 개입해야 한다고 봤어요. 그런데 1960년 경제학자 로널드 코즈는 재산권만 명확하면 당사자끼리 협상해서 시장이 스스로 효율적인 결과에 도달한다고 반박했어요. 협상 비용이 거의 들지 않는다면 누가 애초에 권리를 갖든 최종 결과는 똑같다는 게 핵심이에요. 다만 당사자가 많아지거나 정보가 불완전해지면 거래비용이 커져 협상이 무너지고, 그때는 정부 개입이 다시 필요해질 수 있어요.",
 };
 
 function decodeEntities(str) {
@@ -399,7 +402,7 @@ ${NAV_SCRIPT}
       name: '낯선단어 쪼개보기',
       desc: '낯선 영단어를 어원(뿌리)으로 쪼개서 뜻을 추론해보는 시리즈예요.',
       href: 'archive/word-breakdown.html',
-      count: '9편',
+      count: '10편',
       ready: true,
     },
     {
@@ -413,7 +416,7 @@ ${NAV_SCRIPT}
       name: '거친구문 길들이기',
       desc: '도치·생략처럼 날뛰는 구문을 붙잡아 뜯어서 설명하는 시리즈예요.',
       href: 'archive/rough-syntax.html',
-      count: '8편',
+      count: '9편',
       ready: true,
     },
   ];
@@ -551,6 +554,11 @@ ${NAV_SCRIPT}
     <changefreq>monthly</changefreq>
     <priority>0.6</priority>
   </url>`,
+    `  <url>
+    <loc>https://jessie5599.github.io/archive/word-breakdown-10.html</loc>
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>`,
     // 쏙쏙어법 한 조각 시리즈 — 마찬가지로 수동으로 만든 페이지, sitemap 재생성 시 같이 챙겨야 안 없어진다.
     `  <url>\n    <loc>https://jessie5599.github.io/archive/soksok-grammar.html</loc>\n    <changefreq>weekly</changefreq>\n    <priority>0.8</priority>\n  </url>`,
     `  <url>\n    <loc>https://jessie5599.github.io/archive/soksok-grammar-1.html</loc>\n    <changefreq>monthly</changefreq>\n    <priority>0.6</priority>\n  </url>`,
@@ -597,6 +605,11 @@ ${NAV_SCRIPT}
   </url>`,
     `  <url>
     <loc>https://jessie5599.github.io/archive/rough-syntax-8.html</loc>
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>`,
+    `  <url>
+    <loc>https://jessie5599.github.io/archive/rough-syntax-9.html</loc>
     <changefreq>monthly</changefreq>
     <priority>0.6</priority>
   </url>`,
