@@ -50,6 +50,9 @@ const SUMMARY_OVERRIDES = {
   // 2026-10-15: 코즈의정리도 릴스 내레이션이 없어 findDraftSummary()의 한 줄 인용문만 쓰이며 짧아졌음.
   // 같은 방식으로 hook/concepts 절을 바탕으로 보강.
   '코즈의정리': "오늘은 '코즈의 정리'를 알아볼게요. 목장주의 소가 옆 농지의 곡식을 짓밟는다면, 전통적인 경제학은 정부가 세금이나 규제로 개입해야 한다고 봤어요. 그런데 1960년 경제학자 로널드 코즈는 재산권만 명확하면 당사자끼리 협상해서 시장이 스스로 효율적인 결과에 도달한다고 반박했어요. 협상 비용이 거의 들지 않는다면 누가 애초에 권리를 갖든 최종 결과는 똑같다는 게 핵심이에요. 다만 당사자가 많아지거나 정보가 불완전해지면 거래비용이 커져 협상이 무너지고, 그때는 정부 개입이 다시 필요해질 수 있어요.",
+  // 2026-10-17: 르샤틀리에의원리도 릴스 내레이션이 없어 findDraftSummary()의 한 줄 인용문만 쓰이며 짧아졌음.
+  // 같은 방식으로 hook/concepts 절을 바탕으로 보강.
+  '르샤틀리에의원리': "오늘은 '르 샤틀리에의 원리'를 알아볼게요. 20세기 초 독일 화학자들은 질소와 수소로 암모니아를 합성하려다, 반응이 어느 지점부터 더 늘지 않는 벽에 부딪혔어요. 프랑스 화학자 앙리 르 샤틀리에는 이게 멈춘 게 아니라, 정반응과 역반응이 같은 속도로 계속 일어나는 동적평형이라고 설명했어요. 그는 더 나아가 평형 상태의 계에 농도, 압력, 온도 같은 외부 조건 변화가 가해지면, 계가 그 변화를 상쇄하는 방향으로 스스로 이동해 새로운 평형에 도달한다는 원리를 제시했어요. 압력을 높이면 기체 몰수가 줄어드는 방향으로 평형이 이동해요.",
 };
 
 function decodeEntities(str) {
@@ -409,14 +412,14 @@ ${NAV_SCRIPT}
       name: '쏙쏙어법 한 조각',
       desc: '중등부터 수능까지 이어지는 어법 포인트를 하나씩 짚어보는 시리즈예요.',
       href: 'archive/soksok-grammar.html',
-      count: '9편',
+      count: '10편',
       ready: true,
     },
     {
       name: '거친구문 길들이기',
       desc: '도치·생략처럼 날뛰는 구문을 붙잡아 뜯어서 설명하는 시리즈예요.',
       href: 'archive/rough-syntax.html',
-      count: '9편',
+      count: '10편',
       ready: true,
     },
   ];
@@ -586,6 +589,11 @@ ${NAV_SCRIPT}
     <changefreq>monthly</changefreq>
     <priority>0.6</priority>
   </url>`,
+    `  <url>
+    <loc>https://jessie5599.github.io/archive/soksok-grammar-10.html</loc>
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>`,
     // 거친구문 길들이기 시리즈 — 마찬가지로 수동으로 만든 페이지, sitemap 재생성 시 같이 챙겨야 안 없어진다.
     `  <url>\n    <loc>https://jessie5599.github.io/archive/rough-syntax.html</loc>\n    <changefreq>weekly</changefreq>\n    <priority>0.8</priority>\n  </url>`,
     `  <url>\n    <loc>https://jessie5599.github.io/archive/rough-syntax-1.html</loc>\n    <changefreq>monthly</changefreq>\n    <priority>0.6</priority>\n  </url>`,
@@ -610,6 +618,11 @@ ${NAV_SCRIPT}
   </url>`,
     `  <url>
     <loc>https://jessie5599.github.io/archive/rough-syntax-9.html</loc>
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>`,
+    `  <url>
+    <loc>https://jessie5599.github.io/archive/rough-syntax-10.html</loc>
     <changefreq>monthly</changefreq>
     <priority>0.6</priority>
   </url>`,
