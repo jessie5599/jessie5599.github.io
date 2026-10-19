@@ -53,6 +53,9 @@ const SUMMARY_OVERRIDES = {
   // 2026-10-17: 르샤틀리에의원리도 릴스 내레이션이 없어 findDraftSummary()의 한 줄 인용문만 쓰이며 짧아졌음.
   // 같은 방식으로 hook/concepts 절을 바탕으로 보강.
   '르샤틀리에의원리': "오늘은 '르 샤틀리에의 원리'를 알아볼게요. 20세기 초 독일 화학자들은 질소와 수소로 암모니아를 합성하려다, 반응이 어느 지점부터 더 늘지 않는 벽에 부딪혔어요. 프랑스 화학자 앙리 르 샤틀리에는 이게 멈춘 게 아니라, 정반응과 역반응이 같은 속도로 계속 일어나는 동적평형이라고 설명했어요. 그는 더 나아가 평형 상태의 계에 농도, 압력, 온도 같은 외부 조건 변화가 가해지면, 계가 그 변화를 상쇄하는 방향으로 스스로 이동해 새로운 평형에 도달한다는 원리를 제시했어요. 압력을 높이면 기체 몰수가 줄어드는 방향으로 평형이 이동해요.",
+  // 2026-10-19: 초과회복이론도 릴스 내레이션이 없어 findDraftSummary()의 한 줄 인용문만 쓰이며 짧아졌음.
+  // 같은 방식으로 hook/concepts 절을 바탕으로 보강.
+  '초과회복이론': "오늘은 '초과회복 이론'을 알아볼게요. 마라톤 선수들은 대회 직전 오히려 훈련량을 줄이는 테이퍼링 기간을 가져요. 1936년 캐나다의 내분비학자 한스 셀리에는 쥐에게 여러 스트레스를 줬을 때 몸이 경보, 저항, 소진이라는 같은 3단계로 반응한다는 일반적응증후군을 발견했고, 이게 운동생리학의 초과회복 이론으로 이어졌어요. 훈련 자극을 받으면 몸은 일시적으로 기능이 떨어지지만, 충분히 쉬면 원래 수준을 넘어서는 지점까지 올라가요. 다만 휴식이 너무 짧으면 정점 전에 다음 자극을 맞아 오히려 기능이 떨어지고, 너무 길면 회복으로 얻은 이득이 다시 사라져요.",
 };
 
 function decodeEntities(str) {
@@ -405,7 +408,7 @@ ${NAV_SCRIPT}
       name: '낯선단어 쪼개보기',
       desc: '낯선 영단어를 어원(뿌리)으로 쪼개서 뜻을 추론해보는 시리즈예요.',
       href: 'archive/word-breakdown.html',
-      count: '10편',
+      count: '11편',
       ready: true,
     },
     {
@@ -559,6 +562,11 @@ ${NAV_SCRIPT}
   </url>`,
     `  <url>
     <loc>https://jessie5599.github.io/archive/word-breakdown-10.html</loc>
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>`,
+    `  <url>
+    <loc>https://jessie5599.github.io/archive/word-breakdown-11.html</loc>
     <changefreq>monthly</changefreq>
     <priority>0.6</priority>
   </url>`,
