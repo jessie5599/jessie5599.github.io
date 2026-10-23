@@ -241,6 +241,11 @@
     <priority>0.6</priority>
   </url>
   <url>
+    <loc>https://jessie5599.github.io/archive/43.html</loc>
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  <url>
     <loc>https://jessie5599.github.io/archive/word-breakdown.html</loc>
     <changefreq>weekly</changefreq>
     <priority>0.8</priority>
@@ -301,6 +306,11 @@
     <priority>0.6</priority>
   </url>
   <url>
+    <loc>https://jessie5599.github.io/archive/word-breakdown-12.html</loc>
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  <url>
     <loc>https://jessie5599.github.io/archive/soksok-grammar.html</loc>
     <changefreq>weekly</changefreq>
     <priority>0.8</priority>
@@ -357,6 +367,11 @@
   </url>
   <url>
     <loc>https://jessie5599.github.io/archive/soksok-grammar-11.html</loc>
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  <url>
+    <loc>https://jessie5599.github.io/archive/soksok-grammar-12.html</loc>
     <changefreq>monthly</changefreq>
     <priority>0.6</priority>
   </url>
