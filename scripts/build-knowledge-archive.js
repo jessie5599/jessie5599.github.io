@@ -422,7 +422,7 @@ ${NAV_SCRIPT}
       name: '거친구문 길들이기',
       desc: '도치·생략처럼 날뛰는 구문을 붙잡아 뜯어서 설명하는 시리즈예요.',
       href: 'archive/rough-syntax.html',
-      count: '12편',
+      count: '13편',
       ready: true,
     },
   ];
@@ -666,6 +666,11 @@ ${NAV_SCRIPT}
   </url>`,
     `  <url>
     <loc>https://jessie5599.github.io/archive/rough-syntax-12.html</loc>
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>`,
+    `  <url>
+    <loc>https://jessie5599.github.io/archive/rough-syntax-13.html</loc>
     <changefreq>monthly</changefreq>
     <priority>0.6</priority>
   </url>`,
