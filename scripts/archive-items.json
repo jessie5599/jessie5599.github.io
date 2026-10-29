@@ -313,5 +313,12 @@
   "thumbnail": "https://blogthumb.pstatic.net/MjAyNjEwMDNfMjYy/MDAxNzkxMDA3NTQzMzcw.Almp6mseU4xKvkNl0sl3YZPaavYVKmWRlEGzlr7lsC0g.-R8HUjaCvnyBF9-mQiruw_llEaLWA-skB2AgW4XF4ZQg.PNG/01-cover.png?type=s3",
   "summary": "오늘은 '정교화 가능성 모델'을 알아볼게요. 두 가지 광고를 떠올려 보세요. 하나는 제품의 성분과 임상 데이터를 조목조목 보여주는 광고이고, 다른 하나는 인기 연예인이 환하게 웃으며 제품을 들고 있는 광고예요. 같은 제품인데도 누군가는 앞의 광고에, 누군가는 뒤의 광고에 더 쉽게 마음을 열어요. 심리학자 페티와 카시오포는 1980년대에 사람은 왜 같은 메시지에도 서로 다르게 설득되는가라는 질문에 답하려고 이 모델을 제안했어요. 설득은 하나의 과정이 아니라, 받아들이는 사람의 상태에 따라 두 갈래로 일어나요. 메시지를 깊이 따져볼 동기와 능력이 있으면 논리와 근거를 보는 중심경로로, 그렇지 않으면 분위기와 매력 같은 단서를 보는 주변경로로 가요. 주변경로로 형성된 태도는 설득에 성공해도 오래 지속되기 어렵다는 점이 핵심이에요.",
   "link": "https://m.blog.naver.com/jessie5599/224430381236?fromRss=true&trackingCode=rss"
+ },
+ {
+  "day": 46,
+  "displayTitle": "오차 정정 코드",
+  "thumbnail": "https://blogthumb.pstatic.net/MjAyNjEwMDNfMTkw/MDAxNzkxMDExNzQ1NDg2.eICGU9VGCQSJJ2_O3pt6Oa5LUhyWHvvpV_VSJ_ZjhvQg.KSc9WIN-LNEYPN6rq62a-sFvmlrdAjr0oDSPfZg2_vEg.PNG/01-cover.png?type=s3",
+  "summary": "오늘은 '오차 정정 코드'를 알아볼게요. CD에 작은 흠집이 나도 음악은 끊기지 않고, 수십억 킬로미터 떨어진 우주 탐사선이 보낸 사진도 또렷하게 도착해요. 전선을 타든 우주 공간을 가로지르든, 정보가 전달되는 동안 잡음 때문에 비트 일부가 뒤바뀌는 오류는 피할 수 없는데도요. 1940년대 벨 연구소의 리처드 해밍은 컴퓨터가 계산 중 오류를 내면 처음부터 다시 돌려야 하는 상황이 답답했어요. 그래서 오류가 나면 기계가 스스로 고칠 수는 없을까라는 질문에서 해밍 코드를 고안했고, 이것이 오늘날 통신과 저장장치에 쓰이는 오차 정정 코드의 출발점이에요. 패리티 비트처럼 오류를 검출만 하는 데서 나아가, 덧붙인 중복 정보를 이용해 오류의 위치를 찾아 직접 고치는 거예요. 다만 중복 정보를 늘릴수록 전송 효율은 떨어지니, 정정 능력과 속도는 서로 맞바꿔야 하는 관계예요.",
+  "link": "https://m.blog.naver.com/jessie5599/224430381952?fromRss=true&trackingCode=rss"
  }
 ]
