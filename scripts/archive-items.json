@@ -320,5 +320,19 @@
   "thumbnail": "https://blogthumb.pstatic.net/MjAyNjEwMDNfMTkw/MDAxNzkxMDExNzQ1NDg2.eICGU9VGCQSJJ2_O3pt6Oa5LUhyWHvvpV_VSJ_ZjhvQg.KSc9WIN-LNEYPN6rq62a-sFvmlrdAjr0oDSPfZg2_vEg.PNG/01-cover.png?type=s3",
   "summary": "오늘은 '오차 정정 코드'를 알아볼게요. CD에 작은 흠집이 나도 음악은 끊기지 않고, 수십억 킬로미터 떨어진 우주 탐사선이 보낸 사진도 또렷하게 도착해요. 전선을 타든 우주 공간을 가로지르든, 정보가 전달되는 동안 잡음 때문에 비트 일부가 뒤바뀌는 오류는 피할 수 없는데도요. 1940년대 벨 연구소의 리처드 해밍은 컴퓨터가 계산 중 오류를 내면 처음부터 다시 돌려야 하는 상황이 답답했어요. 그래서 오류가 나면 기계가 스스로 고칠 수는 없을까라는 질문에서 해밍 코드를 고안했고, 이것이 오늘날 통신과 저장장치에 쓰이는 오차 정정 코드의 출발점이에요. 패리티 비트처럼 오류를 검출만 하는 데서 나아가, 덧붙인 중복 정보를 이용해 오류의 위치를 찾아 직접 고치는 거예요. 다만 중복 정보를 늘릴수록 전송 효율은 떨어지니, 정정 능력과 속도는 서로 맞바꿔야 하는 관계예요.",
   "link": "https://m.blog.naver.com/jessie5599/224430381952?fromRss=true&trackingCode=rss"
+ },
+ {
+  "day": 47,
+  "displayTitle": "브레히트의 소격효과",
+  "thumbnail": "https://blogthumb.pstatic.net/MjAyNjEwMDVfMTA2/MDAxNzkxMTI3OTE4OTI0.T6BDm0j0eV9EcWq_aomCrOFr9f-leAKO_WEk6U1vRqEg.vXzMetcwz1hwjhd537VJWxXnXCV7nHptpI1veXhg2jIg.PNG/01-cover.png?type=s3",
+  "summary": "오늘은 '브레히트의 소격효과'를 알아볼게요. 연극을 보다가 갑자기 배우가 연기를 멈추고 객석을 향해 이건 그냥 극일 뿐입니다라고 말을 건넨다면 어떨까요. 몰입해서 눈물까지 흘리려던 관객은 순간 당황스럽겠죠. 그런데 20세기 독일의 극작가이자 연출가 브레히트는 바로 이런 몰입 깨기를 연극의 핵심 전략으로 삼았어요. 아리스토텔레스 이후 서양 연극은 관객이 인물에게 깊이 공감하며 함께 울고 웃는 카타르시스를 추구해왔는데, 브레히트는 이 감정적 몰입이 오히려 문제라고 봤어요. 관객이 무대 속 사회적 부조리에 너무 빠져들면 그것을 당연한 현실로 받아들이고 비판적으로 생각할 기회를 잃는다는 거예요. 그래서 익숙한 것을 낯설게 보이도록 만드는 소격효과를 고안했고, 이런 연극을 서사극이라고 불러요. 예술의 진정한 효과는 감정적 몰입이 아니라 비판적 거리에서 나온다는 생각이에요.",
+  "link": "https://m.blog.naver.com/jessie5599/224432084697?fromRss=true&trackingCode=rss"
+ },
+ {
+  "day": 48,
+  "displayTitle": "공간구문론",
+  "thumbnail": "https://blogthumb.pstatic.net/MjAyNjA5MjlfMTcw/MDAxNzkwNjY5NDcyNDM2.1a8wd_hag0LqiXXgc-6OqcflcwyHihm96r7VExajSIog.kAxoiWU-jr7Sf5cGYIVDwOIzyjdEMJyKvk4jYiK3ue4g.PNG/title.png?type=s3",
+  "summary": "오늘은 '공간구문론'을 알아볼게요. 1970년대 런던의 건축학자 빌 힐리어는 이상한 현상을 목격해요. 비슷한 예산과 자재로 지은 공공 주택 단지인데, 어떤 곳은 활기차고 안전한 반면 어떤 곳은 금세 우범지대가 됐어요. 다들 디자인이 별로였나 보다고 생각했지만, 힐리어는 범죄율의 차이가 건물의 외관이나 재료가 아니라 공간들이 서로 어떻게 연결되어 있느냐에서 비롯된다는 걸 발견했어요. 아무리 예쁘게 지어도 진입로가 하나뿐이고 고립된 공간은 사람이 잘 다니지 않아 위험해지고, 평범해 보여도 여러 길과 촘촘히 연결된 공간은 사람의 발길이 끊이지 않아 자연스러운 감시가 이뤄져 안전해져요. 이 통찰에서 나온 것이 공간구문론이에요. 공간의 가치는 눈에 보이는 형태가 아니라 공간들이 맺는 관계의 구조가 결정한다는 이론이에요.",
+  "link": "https://m.blog.naver.com/jessie5599/224432096867?fromRss=true&trackingCode=rss"
  }
 ]
