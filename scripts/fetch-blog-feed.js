@@ -61,6 +61,25 @@ async function main() {
     }
   }
 
+  // 네이버 RSS 는 최근 글 50개만 준다. 시리즈 글이 매일 쌓이면 제씨영어소식·고등부·중등부처럼 가끔 올라오는
+  // 카테고리의 글이 50개 밖으로 밀려나 카드가 통째로 사라진다(2026-10-30 중등부 카드가 이렇게 사라짐).
+  // RSS 에서 못 찾은 카테고리는 이전 blog-feed.json 의 카드를 그대로 유지한다.
+  let prev = [];
+  try { prev = JSON.parse(fs.readFileSync('blog-feed.json', 'utf8')).items || []; } catch (e) {}
+  for (const key of CATEGORY_ORDER) {
+    const label = CATEGORY_LABEL[key];
+    if (pickedLabels.has(label)) continue;
+    const old = prev.find((p) => p.label === label);
+    if (old) {
+      picked.push(old);
+      pickedLabels.add(label);
+      console.log('RSS 에 없어 이전 카드 유지:', label, '|', old.title);
+    }
+  }
+  // 카드 순서는 CATEGORY_ORDER 기준으로 정렬한다(유지된 카드가 뒤로 밀리지 않게).
+  const order = [...new Set(CATEGORY_ORDER.map((k) => CATEGORY_LABEL[k]))];
+  picked.sort((a, b) => order.indexOf(a.label) - order.indexOf(b.label));
+
   if (picked.length === 0) {
     throw new Error('No matching categories found in feed — check category names in the RSS');
   }
