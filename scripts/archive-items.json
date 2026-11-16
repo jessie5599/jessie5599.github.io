@@ -369,5 +369,12 @@
   "thumbnail": "https://blogthumb.pstatic.net/MjAyNjEwMTFfMTUw/MDAxNzkxNzE3NjQ3NzQ0._BGO_VFTAxWx1w5Xi_TUnD_d9jwAv7Uh2EtCO2L9ZaIg.1nSu3OrCNF2gCEpwhDZKVhxvls2OpGP0qZ7jSibYZxsg.PNG/01-cover.png?type=s3",
   "summary": "오늘은 '벤야민의 아우라'를 알아볼게요. 루브르 박물관에서 모나리자 원작을 직접 보는 것과, 그걸 찍은 사진이나 포스터를 보는 건 같은 경험일까요. 눈에 들어오는 이미지는 거의 똑같은데도, 원작 앞에서는 묘한 긴장감과 감동을 느끼게 돼요. 1930년대 독일 철학자 발터 벤야민은 이 차이를 만드는 것을 아우라라고 불렀어요. 지금 이 순간, 이 장소에 단 하나뿐인 원본으로 존재한다는 사실에서 나오는 고유한 분위기예요. 그런데 사진과 영화 같은 복제 기술이 발달하면서 이 아우라가 점점 사라진다고 벤야민은 진단했어요. 다만 그 대신 더 많은 사람이 예술에 쉽게 다가갈 수 있게 됐다는 점도 함께 이야기해요.",
   "link": "https://m.blog.naver.com/jessie5599/224439291136?fromRss=true&trackingCode=rss"
+ },
+ {
+  "day": 54,
+  "displayTitle": "기초재생산수(R0)와 집단면역",
+  "thumbnail": "https://blogthumb.pstatic.net/MjAyNjEwMTBfNzMg/MDAxNzkxNjQwNjIxNzI0.ACU0qfWI2b3WeibuFSD0akvGcD7ykYEtd28YYbTBZOsg.2zJljBU3ZdoqZ5wOaIHJXhdT9RP4m4cg-ntf8s0ZjRIg.PNG/01-cover.png?type=s3",
+  "summary": "오늘은 '기초재생산수(R0)와 집단면역'을 알아볼게요. 코로나19가 한창일 때 뉴스에서는 이번 변이의 R0가 몇이라는 말이 자주 나왔지만, 정작 이 숫자가 무엇을 뜻하는지 아는 사람은 드물었어요. 1920년대 수학자 커맥과 매켄드릭은 질병의 확산을 감염자 수가 아니라 한 사람이 평균 몇 명을 감염시키는가라는 비율로 바꿔 생각했는데, 이 발상이 R0의 출발점이에요. 이 숫자를 기준으로 인구의 얼마만큼이 면역을 가지면 확산이 꺾이는지 계산한 경계선이 집단면역 임계값이에요. 흥미로운 점은 R0가 병원체만의 고유한 값이 아니라 사람들의 접촉 방식 같은 사회적 조건까지 섞여서 나오는 가변적인 값이라는 거예요.",
+  "link": "https://m.blog.naver.com/jessie5599/224440621509?fromRss=true&trackingCode=rss"
  }
 ]
