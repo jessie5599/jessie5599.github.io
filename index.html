@@ -326,26 +326,26 @@
   }
   .promo-backdrop.show{opacity:1;}
   .promo-card{
-    position:relative;width:min(420px, 100%, calc(100vh - 150px));min-width:min(300px,100%);
+    position:relative;width:min(420px, 100%, calc((100vh - 170px) * 0.9636));min-width:min(280px,100%);
     background:var(--paper);border-radius:4px;overflow:hidden;
     box-shadow:0 18px 48px rgba(16,28,44,0.35);
     transform:translateY(12px);transition:transform .25s ease;
   }
   .promo-backdrop.show .promo-card{transform:none;}
-  .promo-img{display:block;width:100%;height:auto;aspect-ratio:1/1;}
+  .promo-img{display:block;width:100%;height:auto;aspect-ratio:900/934;}
   .promo-close{
     position:absolute;top:8px;right:8px;width:36px;height:36px;border:none;border-radius:50%;
     background:rgba(255,255,255,0.9);color:var(--navy);font-size:24px;line-height:1;cursor:pointer;
     box-shadow:0 1px 4px rgba(16,28,44,0.25);
   }
   .promo-close:hover{background:#fff;}
-  .promo-actions{display:flex;gap:10px;padding:14px 16px 4px;}
+  .promo-actions{display:flex;gap:6px;padding:12px 12px 4px;}
   .promo-actions a{
-    flex:1;text-align:center;padding:13px 8px;border-radius:3px;font-weight:700;font-size:16.5px;
+    flex:1;text-align:center;padding:12px 4px;border-radius:3px;font-weight:700;font-size:15px;white-space:nowrap;
     transition:background .15s ease,color .15s ease;
   }
-  .promo-more{border:1.5px solid var(--navy);color:var(--navy);background:#fff;}
-  .promo-more:hover{background:var(--navy);color:#fff;}
+  .promo-more,.promo-more-mid{border:1.5px solid var(--navy);color:var(--navy);background:#fff;}
+  .promo-more:hover,.promo-more-mid:hover{background:var(--navy);color:#fff;}
   .promo-consult{background:var(--orange);color:#fff;border:1.5px solid var(--orange);}
   .promo-consult:hover{background:#cf6f1a;border-color:#cf6f1a;}
   .promo-foot{display:flex;justify-content:space-between;align-items:center;padding:4px 16px 8px;}
@@ -384,11 +384,12 @@
 </style>
 </head>
 <body>
-<div class="promo-bar" id="promoBar" role="region" aria-label="예비고1 과정 개강 안내">
+<div class="promo-bar" id="promoBar" role="region" aria-label="예비중·고 과정 개강 안내">
   <div class="promo-bar-in">
-    <p><b>예비고1 과정 개강 안내</b> 2026년 11월 23일(월), 기말고사 끝나자마자 바로 시작해요.</p>
+    <p><b>예비중·고 영어 시작!</b> 예비고1 11월 23일 개강 · 예비중1 12월 14일 개강 예정</p>
     <span class="bar-links">
-      <a class="bar-more" href="https://blog.naver.com/jessie5599/224455877327" target="_blank" rel="noopener">자세히 보기</a>
+      <a class="bar-more" href="https://blog.naver.com/jessie5599/224455877327" target="_blank" rel="noopener">예비고 안내</a>
+      <a class="bar-more" href="https://blog.naver.com/jessie5599/224482653562" target="_blank" rel="noopener">예비중 안내</a>
       <a class="bar-consult" href="#contact">상담 신청</a>
     </span>
     <button type="button" class="bar-x" id="promoBarX" aria-label="안내 띠 닫기">&times;</button>
@@ -398,7 +399,7 @@
 (function(){
   var bar = document.getElementById('promoBar');
   if(!bar) return;
-  var KEY = 'promo-pre-go1-2026-11:bar-hide-until', UNTIL = '2026-11-23';
+  var KEY = 'promo-pre-mid-go-2026-12:bar-hide-until', UNTIL = '2026-12-31';
   var today = new Date(Date.now() + 9*3600*1000).toISOString().slice(0,10);
   var hide = today > UNTIL;
   try{ var u = localStorage.getItem(KEY); if(u && today <= u) hide = true; }catch(e){}
@@ -838,12 +839,13 @@
 /* 개강 안내 팝업: 아래 PROMO 값만 바꾸면 다음 안내에도 그대로 쓸 수 있습니다 */
 (function(){
   var PROMO = {
-    key: 'promo-pre-go1-2026-11',
-    until: '2026-11-23',   // 이 날짜(한국 시간)까지만 보입니다
-    label: '예비고1 과정 개강 안내',
-    image: 'assets/popup-pre-go1.jpg',
-    alt: '옥길동 영어학원 제씨영어입시학원 - 예비고1 과정 개강 안내, 2026년 11월 23일(월) 개강',
-    moreUrl: 'https://blog.naver.com/jessie5599/224455877327',
+    key: 'promo-pre-mid-go-2026-12',
+    until: '2026-12-31',   // 이 날짜(한국 시간)까지만 보입니다
+    label: '예비중·고 과정 개강 안내',
+    image: 'assets/popup-pre-mid-go.jpg',
+    alt: '옥길동 영어학원 제씨영어입시학원 - 예비중·고 영어 시작, 예비고1 11월 23일 개강, 예비중1 12월 개강 예정 안내 포스터',
+    goUrl: 'https://blog.naver.com/jessie5599/224455877327',
+    midUrl: 'https://blog.naver.com/jessie5599/224482653562',
     consultHref: '#contact'
   };
 
@@ -892,12 +894,11 @@
     backdrop.id = 'promo-popup';
     backdrop.innerHTML =
       '<div class="promo-card" role="dialog" aria-modal="true" aria-label="' + esc(PROMO.label) + '">' +
-        '<a href="' + esc(PROMO.moreUrl) + '" target="_blank" rel="noopener" tabindex="-1">' +
-          '<img class="promo-img" src="' + esc(PROMO.image) + '" alt="' + esc(PROMO.alt) + '" width="840" height="840">' +
-        '</a>' +
+        '<img class="promo-img" src="' + esc(PROMO.image) + '" alt="' + esc(PROMO.alt) + '" width="900" height="934">' +
         '<button type="button" class="promo-close" aria-label="팝업 닫기">&times;</button>' +
         '<div class="promo-actions">' +
-          '<a class="promo-more" href="' + esc(PROMO.moreUrl) + '" target="_blank" rel="noopener">자세히 보기</a>' +
+          '<a class="promo-more" href="' + esc(PROMO.goUrl) + '" target="_blank" rel="noopener">예비고 안내</a>' +
+          '<a class="promo-more-mid" href="' + esc(PROMO.midUrl) + '" target="_blank" rel="noopener">예비중 안내</a>' +
           '<a class="promo-consult" href="' + esc(PROMO.consultHref) + '">상담 신청</a>' +
         '</div>' +
         '<div class="promo-foot">' +
