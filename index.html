@@ -359,59 +359,9 @@
     .promo-backdrop,.promo-card{transition:none;}
   }
 
-  /* ===== 개강 안내 띠 배너 ===== */
-  .promo-bar{background:var(--navy);color:#fff;font-size:15.5px;}
-  .promo-bar .promo-bar-in{
-    max-width:1120px;margin:0 auto;padding:9px 48px 9px 24px;position:relative;
-    display:flex;flex-wrap:wrap;align-items:center;justify-content:center;gap:6px 14px;text-align:center;
-  }
-  .promo-bar b{color:#FFD9A8;font-weight:700;}
-  .promo-bar p{margin:0;word-break:keep-all;}
-  .promo-bar .bar-links{display:flex;gap:8px;align-items:center;}
-  .promo-bar .bar-more{color:#fff;text-decoration:underline;text-underline-offset:3px;font-weight:600;}
-  .promo-bar .bar-consult{background:var(--orange);color:#fff;padding:5px 14px;border-radius:3px;font-weight:700;}
-  .promo-bar .bar-consult:hover{background:#cf6f1a;}
-  .promo-bar .bar-x{
-    position:absolute;top:50%;right:10px;transform:translateY(-50%);width:32px;height:32px;border:none;
-    background:transparent;color:#fff;font-size:22px;line-height:1;cursor:pointer;border-radius:3px;
-  }
-  .promo-bar .bar-x:hover{background:rgba(255,255,255,0.14);}
-  .promo-bar a:focus-visible,.promo-bar button:focus-visible{outline:3px solid #fff;outline-offset:2px;}
-  @media (max-width:560px){
-    .promo-bar{font-size:14.5px;}
-    .promo-bar .promo-bar-in{padding:8px 40px 8px 14px;}
-  }
 </style>
 </head>
 <body>
-<div class="promo-bar" id="promoBar" role="region" aria-label="예비중·고 과정 개강 안내">
-  <div class="promo-bar-in">
-    <p><b>예비중·고 영어 시작!</b> 예비고1 11월 23일 개강 · 예비중1 12월 14일 개강 예정</p>
-    <span class="bar-links">
-      <a class="bar-more" href="https://blog.naver.com/jessie5599/224455877327" target="_blank" rel="noopener">예비고 안내</a>
-      <a class="bar-more" href="https://blog.naver.com/jessie5599/224482653562" target="_blank" rel="noopener">예비중 안내</a>
-      <a class="bar-consult" href="#contact">상담 신청</a>
-    </span>
-    <button type="button" class="bar-x" id="promoBarX" aria-label="안내 띠 닫기">&times;</button>
-  </div>
-</div>
-<script>
-(function(){
-  var bar = document.getElementById('promoBar');
-  if(!bar) return;
-  var KEY = 'promo-pre-mid-go-2026-12:bar-hide-until', UNTIL = '2026-12-31';
-  var today = new Date(Date.now() + 9*3600*1000).toISOString().slice(0,10);
-  var hide = today > UNTIL;
-  try{ var u = localStorage.getItem(KEY); if(u && today <= u) hide = true; }catch(e){}
-  if(hide){ bar.parentNode.removeChild(bar); return; }
-  document.getElementById('promoBarX').addEventListener('click', function(){
-    try{ localStorage.setItem(KEY, today); }catch(e){}
-    bar.parentNode.removeChild(bar);
-  });
-})();
-</script>
-
-
 <header>
   <div class="nav">
     <div class="brand">제씨<span>영어</span>입시학원</div>
