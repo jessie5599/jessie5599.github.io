@@ -56,6 +56,9 @@ const SUMMARY_OVERRIDES = {
   // 2026-10-19: 초과회복이론도 릴스 내레이션이 없어 findDraftSummary()의 한 줄 인용문만 쓰이며 짧아졌음.
   // 같은 방식으로 hook/concepts 절을 바탕으로 보강.
   '초과회복이론': "오늘은 '초과회복 이론'을 알아볼게요. 마라톤 선수들은 대회 직전 오히려 훈련량을 줄이는 테이퍼링 기간을 가져요. 1936년 캐나다의 내분비학자 한스 셀리에는 쥐에게 여러 스트레스를 줬을 때 몸이 경보, 저항, 소진이라는 같은 3단계로 반응한다는 일반적응증후군을 발견했고, 이게 운동생리학의 초과회복 이론으로 이어졌어요. 훈련 자극을 받으면 몸은 일시적으로 기능이 떨어지지만, 충분히 쉬면 원래 수준을 넘어서는 지점까지 올라가요. 다만 휴식이 너무 짧으면 정점 전에 다음 자극을 맞아 오히려 기능이 떨어지고, 너무 길면 회복으로 얻은 이득이 다시 사라져요.",
+  // 2026-11-21: 신장단축주기도 릴스 내레이션이 없어 findDraftSummary()의 한 줄 인용문만 쓰이며 짧아졌음.
+  // 같은 방식으로 hook/concepts 절을 바탕으로 보강.
+  '신장단축주기': "오늘은 '신장-단축 주기'를 알아볼게요. 제자리에서 뛸 때, 가만히 서서 바로 뛰는 것보다 무릎을 살짝 굽혔다가 뛰는 쪽이 더 높이 뛰어요. 근육을 먼저 늘인 다음 곧바로 수축시키면 단순히 수축만 할 때보다 훨씬 큰 힘을 내는데, 이 현상을 신장-단축 주기(SSC)라고 불러요. 신장 국면에서 힘줄 같은 직렬탄성요소에 탄성 에너지가 저장됐다가 단축 국면에서 운동에너지로 더해지고, 급격한 신장이 일으키는 신장반사까지 더해져 힘이 커져요. 다만 전환 시간이 길어지면 저장된 에너지가 열로 흩어져 사라지기 때문에, 이 시간을 줄이도록 설계된 훈련이 플라이오메트릭 트레이닝이에요.",
 };
 
 function decodeEntities(str) {
@@ -415,14 +418,14 @@ ${NAV_SCRIPT}
       name: '쏙쏙어법 한 조각',
       desc: '중등부터 수능까지 이어지는 어법 포인트를 하나씩 짚어보는 시리즈예요.',
       href: 'archive/soksok-grammar.html',
-      count: '19편',
+      count: '20편',
       ready: true,
     },
     {
       name: '거친구문 길들이기',
       desc: '도치·생략처럼 날뛰는 구문을 붙잡아 뜯어서 설명하는 시리즈예요.',
       href: 'archive/rough-syntax.html',
-      count: '19편',
+      count: '20편',
       ready: true,
     },
   ];
@@ -640,6 +643,7 @@ ${NAV_SCRIPT}
     `  <url>\n    <loc>https://jessie5599.github.io/archive/soksok-grammar-17.html</loc>\n    <changefreq>monthly</changefreq>\n    <priority>0.6</priority>\n  </url>`,
     `  <url>\n    <loc>https://jessie5599.github.io/archive/soksok-grammar-18.html</loc>\n    <changefreq>monthly</changefreq>\n    <priority>0.6</priority>\n  </url>`,
     `  <url>\n    <loc>https://jessie5599.github.io/archive/soksok-grammar-19.html</loc>\n    <changefreq>monthly</changefreq>\n    <priority>0.6</priority>\n  </url>`,
+    `  <url>\n    <loc>https://jessie5599.github.io/archive/soksok-grammar-20.html</loc>\n    <changefreq>monthly</changefreq>\n    <priority>0.6</priority>\n  </url>`,
     // 거친구문 길들이기 시리즈 — 마찬가지로 수동으로 만든 페이지, sitemap 재생성 시 같이 챙겨야 안 없어진다.
     `  <url>\n    <loc>https://jessie5599.github.io/archive/rough-syntax.html</loc>\n    <changefreq>weekly</changefreq>\n    <priority>0.8</priority>\n  </url>`,
     `  <url>\n    <loc>https://jessie5599.github.io/archive/rough-syntax-1.html</loc>\n    <changefreq>monthly</changefreq>\n    <priority>0.6</priority>\n  </url>`,
@@ -693,6 +697,7 @@ ${NAV_SCRIPT}
     `  <url>\n    <loc>https://jessie5599.github.io/archive/rough-syntax-17.html</loc>\n    <changefreq>monthly</changefreq>\n    <priority>0.6</priority>\n  </url>`,
     `  <url>\n    <loc>https://jessie5599.github.io/archive/rough-syntax-18.html</loc>\n    <changefreq>monthly</changefreq>\n    <priority>0.6</priority>\n  </url>`,
     `  <url>\n    <loc>https://jessie5599.github.io/archive/rough-syntax-19.html</loc>\n    <changefreq>monthly</changefreq>\n    <priority>0.6</priority>\n  </url>`,
+    `  <url>\n    <loc>https://jessie5599.github.io/archive/rough-syntax-20.html</loc>\n    <changefreq>monthly</changefreq>\n    <priority>0.6</priority>\n  </url>`,
   ];
   const sitemap = `<?xml version="1.0" encoding="UTF-8"?>\n<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">\n${nonArchiveUrls.join('\n')}\n${archiveUrls.join('\n')}\n</urlset>\n`;
   fs.writeFileSync(sitemapPath, sitemap, 'utf8');
